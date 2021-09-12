@@ -1,0 +1,370 @@
+/*============================================
+
+                 13 -- Login
+
+==============================================*/
+
+.login-signup {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    padding: 15px;
+
+    .aloa-checkbox-area {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+
+    .aloa-bg-color {
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background: rgba(255, 255, 255, 0.795);
+        display: flex;
+        padding: 0;
+        box-shadow: $theme-shadow-1;
+    }
+
+    .aloa-bg-img {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        margin: 0;
+        padding: 0;
+    }
+
+    .aloa-content {
+        padding: 65px 90px 45px;
+        width: 100%;
+        background-color: #cdcdcd00;
+
+        @media #{$xs-layout} {
+            padding: 65px 30px 45px;
+
+        }
+    }
+
+    .aloa-header {
+        text-align: center;
+        margin-bottom: 50px;
+
+        .aloa-logo {
+            display: block;
+            
+            margin-bottom: 7px;
+            img{
+                width:130px;
+            }
+        }
+
+        h1 {
+            color: #fff;
+            font-size: 36px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: $gray-500;
+        }
+    }
+
+    .aloa-form {
+        h2 {
+            text-align: center;
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #111111;
+            text-align: center;
+        }
+
+        form .input-label {
+            color: #979696;
+        }
+
+        .form-group {
+            position: relative;
+            z-index: 1;
+
+            .field-icon {
+                position: absolute;
+                z-index: 1;
+                right: 19px;
+                bottom: 18px;
+                font-size: 14px;
+                color: #a1a1a1;
+
+                &:before {
+                    padding: 17px 10px;
+                }
+            }
+        }
+
+        .form-control {
+            min-height: 50px;
+            box-shadow: none;
+            border: 1px solid #e7e7e7;
+            padding: 10px 15px;
+            color: #111;
+        }
+
+        input {
+
+            &::-webkit-input-placeholder,
+            &::-moz-placeholder,
+            &:-moz-placeholder,
+            &:-ms-input-placeholder {
+                color: #a1a1a1;
+                font-size: 15px;
+                font-weight: 300;
+            }
+        }
+    }
+
+    .aloa-btn-fill {
+        font-family: $jost;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 17px;
+        font-weight: 500;
+        border: 0;
+        color: #fff;
+        border-radius: 35px;
+        padding: 10px 36px;
+        margin-bottom: 10px;
+        width: 100%;
+        transition: all 0.3s ease-in-out;
+        transition-duration: 400ms;
+        background-color: $theme-color-1;
+        box-shadow: $theme-shadow-1;
+
+        &:hover,
+        &:focus {
+            background-color: $gray-700;
+            box-shadow: $gray-700-shadow;
+        }
+    }
+
+    .switcher-text {
+        color: $gray-500;
+        font-size: 15px;
+        margin-top: 5px;
+        display: block;
+        transition: all 0.3s ease-in-out;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover,
+        &.active {
+            color: #666;
+        }
+    }
+
+    .switcher-text2 {
+        color: $gray-500;
+        font-size: 15px;
+        margin-top: 5px;
+        margin-left: 2px;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:hover,
+        &.active {
+            color: #000;
+        }
+    }
+
+    .aloa-style-line {
+        overflow: hidden;
+        text-align: center;
+
+        h3 {
+            text-align: center;
+            font-weight: 300;
+            margin-bottom: 30px;
+            font-size: 20px;
+            color: $gray-600;
+            display: inline-block;
+            position: relative;
+            padding: 0 25px;
+            z-index: 1;
+
+            &:before {
+                display: inline-block;
+                content: "";
+                height: 1px;
+                width: 100%;
+                background-color: #ebebeb;
+                left: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                z-index: 1;
+            }
+
+            &:after {
+                display: inline-block;
+                content: "";
+                height: 1px;
+                width: 100%;
+                background-color: #ebebeb;
+                right: 100%;
+                top: 50%;
+                transform: translateY(-50%);
+                position: absolute;
+                z-index: 1;
+            }
+        }
+    }
+
+    .social-media-icons-login {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px !important;
+
+        li {
+            padding: 5px;
+            margin: 0;
+
+            a {
+                padding: 15px 25px;
+                border-radius: 5px;
+                font-size: 15px !important;
+                color: #fff;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border: 1px solid $gray-400 !important;
+                transition: all 0.3s ease;
+                margin: 0;
+                font-size: 20px;
+
+                i {
+                    position: relative;
+                    font-size: 25px;
+                    top: 3px;
+                    color: $gray-600;
+                    color: #fff;
+                }
+
+            }
+
+            a.facebook {
+                background-color: $facebook;
+                border: 1px solid $facebook !important;
+            }
+
+            a.twitter {
+                background: $twitter;
+                border: 1px solid $twitter !important;
+            }
+
+            a.youtube {
+                background: $youtube;
+                border: 1px solid $youtube !important;
+            }
+
+        }
+    }
+
+    .social-media-icons-login li {
+        a:hover.facebook {
+            border: 1px solid $gray-700 !important;
+            background-color: $gray-700;
+            box-shadow: $gray-700-shadow;
+        }
+
+        a:hover.twitter {
+            border: 1px solid $gray-700 !important;
+            background-color: $gray-700;
+            box-shadow: $gray-700-shadow;
+        }
+
+        a:hover.youtube {
+            border: 1px solid $gray-700 !important;
+            background-color: $gray-700;
+            box-shadow: $gray-700-shadow;
+        }
+    }
+
+    .checkbox {
+        padding-left: 5px;
+
+        label {
+            padding-left: 20px;
+            color: $gray-500;
+            margin-bottom: 0;
+            font-size: 15px;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                top: 5px;
+                left: 0;
+                margin-left: -5px;
+                border: 1px solid;
+                border-color: #dcdcdc;
+                border-radius: 3px;
+                background-color: #fff;
+                transition: border 0.15s ease-in-out, color 0.15s ease-in-out;
+            }
+
+            &:after {
+                position: absolute;
+                margin-left: -20px;
+                padding-left: 3px;
+                font-size: 10px;
+                color: #555555;
+            }
+        }
+
+        input[type="checkbox"] {
+            display: none;
+
+            &:checked+label {
+                &::after {
+                    font-family: $line-awesome;
+                    content: "\f00c";
+                    font-weight: 900;
+                    color: #ffffff;
+                    left: 15px;
+                    top: 4px;
+                }
+
+                &::before {
+                    background-color: #2e4bf1;
+                    border-color: #2e4bf1;
+                }
+            }
+        }
+    }
+
+    .aloa-footer {
+        text-align: center;
+
+        p {
+            color: $gray-500;
+        }
+    }
+}

@@ -1,0 +1,128 @@
+/*============================================
+
+                 30 -- Footer
+
+==============================================*/
+
+.footer {
+  padding: 60px 0 0;
+
+  .logo-light {
+    display: block;
+  }
+
+  .logo-dark {
+    display: none;
+  }
+
+  .footer-desc,
+  .footer-alt {
+    color: $gray-400;
+  }
+
+  .text-left{
+    text-align: left;
+  }
+  .text-right{
+    float: right;
+  }
+  .footer-list-title {
+    color: $gray-200;
+  }
+
+  .footer-icons {
+    color: $gray-400;
+    transition: all 0.3s;
+
+    a {
+      width: 45px;
+      height: 45px;
+      line-height: 42px;
+      border: 1px solid $gray-400;
+      border-radius: 50%;
+      display: block;
+      color: $gray-400;
+      font-size: 18px;
+      transition: .5s;
+      text-align: center;
+
+      &:hover {
+        color: $white;
+        background-color: $theme-color-1;
+        border: 1px solid $theme-color-1;
+        box-shadow: $theme-shadow-1;
+      }
+    }
+  }
+
+  .company-sub-menu li {
+    padding: 8px 0;
+
+    a {
+      transition: all 0.5s;
+      color: $gray-400;
+
+      &:hover {
+        color: $gray-300 !important;
+      }
+    }
+  }
+}
+
+.footer-area {
+  padding-top: 150px;
+  padding-bottom: 30px;
+
+   p {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 40px;
+    color:$gray-400;
+  }
+
+  .foot-divider {
+    width: 100%;
+    height: 1px;
+    background-color: $gray-600;
+  }
+
+  .social-link {
+    list-style-type: none;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    padding-left: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 10px;
+
+      a {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        border: 1px solid $gray-400;
+        border-radius: 50%;
+        display: block;
+        color: $gray-400;
+        font-size: 18px;
+        transition: .5s;
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          color: #fff;
+          background-color: $theme-color-1;
+          border-color: $theme-color-1;
+          box-shadow: $theme-shadow-1;
+        }
+      }
+    }
+  }
+
+  p.copyright-text {
+    font-size: 16px;
+    margin-top: 10px;
+    color: $gray-300;
+  }
+
+}

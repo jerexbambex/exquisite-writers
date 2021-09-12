@@ -1,0 +1,134 @@
+/*============================================
+
+                 12 -- Price
+
+==============================================*/
+.pricing-area {
+    background-size: cover;
+    background-position: center center;
+    .pricing-wrapper {
+        padding: 60px 65px 80px 65px;
+        background: #fff;
+        background-image: url("../images/bg/pricing.png");
+        background-repeat: no-repeat;
+        box-shadow: $shadow;
+        .price-count {
+            h1 {
+                font-size: 150px;
+                color: $gray-700;
+                font-weight: 500;
+                line-height: 1;
+                letter-spacing: -3px;
+                margin-bottom: 40px;
+            }
+        
+            &.active h1 {
+                font-size: 150px;
+                color: $theme-color-1;
+                font-weight: 500;
+                line-height: 1;
+                letter-spacing: -3px;
+                margin-bottom: 40px;
+            }
+        
+            span {
+                font-size: 50px;
+                color: $theme-color-1;
+                font-weight: 500;
+            }
+        
+            h1 span.usd {
+                font-size: 30px;
+                font-weight: 500;
+                color: $theme-color-1 ;
+                position: relative;
+                top: -83px;
+            }
+        }
+        .pricing-text h3 {
+            font-size: 26px;
+            color: $gray-600;
+            font-weight: 400;
+            margin-bottom: 0;
+        }
+        .pricing-list {
+            margin-top: 36px;
+            margin-bottom: 47px;
+        
+            li {
+                color: $gray-500;
+                font-size: 18px;
+                font-weight: 400;
+                padding-bottom: 17px;
+                font-family: $jost;
+        
+                &:last-child {
+                    padding-bottom: 0;
+                }
+        
+                i {
+                    margin-right: 17px;
+                }
+            }
+        }
+        
+        .pricing-button {
+            a.btn {
+                color: $gray-700;
+                background: #ebebff;
+                font-weight: 500;
+                transition: .3s;
+                padding:12px 25px;
+                font-size: 18px;
+                border: 1px solid $theme-color-1;
+        box-shadow: $shadow;
+                &:hover {
+                    color: #fff;
+                    background: $theme-color-1;
+                    box-shadow: $theme-shadow-1;
+                }
+            }
+        
+            &.active>a {
+                color: #fff;
+                background: $theme-color-1;
+                box-shadow: $theme-shadow-1;
+            }
+        }
+    
+        
+    }
+    .pricing-tab {
+        display: inline-block;
+        background: #fff;
+        border-radius: 30px;
+    
+        li {
+            display: inline-block;
+    
+            a {
+                color: $gray-700;
+                box-shadow: $gray-700-shadow;
+                text-transform: capitalize;
+                font-weight: 500;
+                padding: 17px 49px;
+                transition: .3s;
+                background: #fff;
+                border-radius: 30px;
+                font-family: $jost;
+                font-size: 18px;
+    
+                &.active,
+                &:hover {
+                    background: $gray-700;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    
+}
+
+
+
+

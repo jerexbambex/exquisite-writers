@@ -1,0 +1,21 @@
+/*============================================
+
+                 06 -- About
+
+==============================================*/
+
+.about-area {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.about-text {
+    h4 {
+        font-family: $barlow;
+        color: $gray-500;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 34px;
+    }
+}

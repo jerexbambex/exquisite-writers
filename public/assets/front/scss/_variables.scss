@@ -1,0 +1,164 @@
+/*============================================
+
+                 01 -- Variables
+
+==============================================*/
+
+
+/*-- Google font --*/
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800;900&family=Jost:wght@300;400;500;600;700;800;900&display=swap');
+
+/*-- Icon --*/
+
+@import url('https://unicons.iconscout.com/release/v3.0.3/css/line.css');
+$remixicon:"remixicon";
+$line-awesome:"Line Awesome Free";
+
+// Base font
+$font-size-base: 17px;
+
+
+$barlow: 'Barlow', sans-serif;
+$jost:'Jost', sans-serif;
+
+
+// Color
+$white: #ffffff;
+$primary: #2f55d4;
+$secondary: #5a6d90;
+$success: #2eca8b;
+$warning: #f17425;
+$info: #17a2b8;
+$danger: #e43f52;
+$dark: #3c4858;
+$black: #161c2d;
+$muted: #8492a6;
+$light: #f8f9fc;
+
+// Gray
+$gray-100: #f8f8fc;
+$gray-200: #edeef5;
+$gray-300: #dcdeed;
+$gray-400: #bdc1d7;
+$gray-500: #8a8eaa;
+$gray-600: #565972;
+$gray-700: #272a3a;
+
+
+
+// Theme Color
+$theme-color-1:#5E79F3;
+
+// Overlay
+$overlay: rgba($dark, 0.45);
+$overlay-white: rgba($white, 0.85);
+
+
+// Body Background
+$body-color: $gray-700;
+$shadow: 0px 10px 80px 0px rgba(215, 215, 215, 0.4);
+$theme-shadow-1:0px 17px 43px 1px rgba(26, 94, 221, 0.4);
+$gray-700-shadow:0px 17px 43px 1px rgba(36, 30, 52, 0.4);
+$shadow-lg: 0 10px 25px rgba($dark, 0.15);
+
+
+
+// Social Color
+$android: #7AC157;
+$apple: #B8B8B8;
+$behance: #1869FF;
+$codepen: $black;
+$dribbble: #EA4C8A;
+$dropbox: #007EE5;
+$evernote: #25d52e;
+$facebook: #1778F2;
+$github: #313131;
+$google-drive: #1DA462;
+$google-earth: #4285F4;
+$google-glass: #EA4335;
+$google-maps: #5083C3;
+$google-play: #01B9FD;
+$google-plus: #DD5144;
+$google: #4285F4;
+$instagram: #B23A94;
+$css3: #0277BD;
+$html5: #E44D26;
+$javascript: #F9DC3D;
+$python: #0C9DBF;
+$lastfm: #E31B23;
+$linkedin: #007BB6;
+$paypal: #002F86;
+$pinterest: #BD081B;
+$pocket: #EF3E56;
+$polymer: #F87292;
+$rss: #F99C3A;
+$share: #2C9CFF;
+$stackoverflow: #F38024;
+$steam: #15497B;
+$twitter: #1DA1F2;
+$vk: #5181B8;
+$wikipedia: #E9E9E9;
+$windows: #0078D6;
+$s500px: $black;
+$s8tracks: #122D4B;
+$amazon: #F79B34;
+$blogger: #F06A35;
+$delicious: #0000FE;
+$disqus: #2E9EFE;
+$flattr: #7AB831;
+$flickr: #FE0084;
+$odnoklassniki: #F58220;
+$outlook: #0072C6;
+$playstation: #07418E;
+$reddit: #FF4500;
+$skype: #00A9F0;
+$slideshare: #0077B5;
+$soundcloud: #FE4900;
+$tumblr: #36465D;
+$twitch: #6441A4;
+$vimeo: #1AB7EA;
+$whatsapp: #189D0E;
+$xbox: #107C0F;
+$yahoo: #4101AF;
+$youtube: #FE0000;
+
+
+// Responsive Variables
+$xx-layout: "only screen and (min-width: 1366px) and (max-width: 1600px)";
+$xl-layout: "only screen and (min-width: 1200px) and (max-width: 1499px)";
+$lg-layout: "only screen and (min-width: 992px) and (max-width: 1199px)";
+$md-layout: "only screen and (min-width: 768px) and (max-width: 991px)";
+$xs-layout: "only screen and (max-width: 767px)";
+$sm-layout: "only screen and (min-width: 576px) and (max-width: 767px)";
+$layout-575: "only screen and (max-width: 575px)";
+$layout-479: "only screen and (max-width: 479px)";
+
+
+
+// Placeholder Mixins
+
+@mixin placeholder {
+    &.placeholder {
+        @content;
+    }
+
+    &:-moz-placeholder {
+        @content;
+    }
+
+    &::-moz-placeholder {
+        @content;
+    }
+
+    &::-webkit-input-placeholder {
+        @content;
+    }
+}
+
+
+@mixin font-prop($size: false, $colour: false, $weight: false,  $lh: false) {
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+}

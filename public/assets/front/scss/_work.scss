@@ -1,0 +1,80 @@
+/*============================================
+
+                 19 -- Work
+
+==============================================*/
+
+
+.work-area {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+
+    h4 {
+        font-family: $barlow;
+        color: $gray-500;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 34px;
+    }
+    img.work__bg {
+        width: 585px;
+        position: absolute;
+        top: 15%;
+        right: 6%;
+    
+        @media only screen and (min-width: 1401px) {
+            right: 14%;
+        }
+    
+        @media #{$md-layout} {
+            display: none;
+        }
+    
+        @media #{$xs-layout} {
+            display: none;
+        }
+    
+        @media #{$sm-layout} {
+            display: none;
+        }
+    
+        @media #{$layout-575} {
+            display: none;
+        }
+    }
+    
+    
+.points {
+    ul li {
+        position: relative;
+        z-index: 2;
+        font-size: 18px;
+        line-height: 26px;
+        color: $gray-500;
+        margin-bottom: 20px;
+        padding-left: 30px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    li i {
+        position: absolute;
+        left: 0;
+        top: 5px;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        line-height: 20px;
+        border-radius: 50%;
+        font-size: 10px;
+        font-weight: 700;
+        color: #fff;
+        background: #40cd79;
+        box-shadow: 0px 5px 24px rgba(54, 207, 118, 0.15);
+    }
+}
+}
+

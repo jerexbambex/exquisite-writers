@@ -1,0 +1,122 @@
+/*============================================
+
+                 02 -- General
+
+==============================================*/
+
+body {
+    font-family: $barlow;
+    overflow-x: hidden !important;
+    font-size: $font-size-base;
+    color: $body-color;
+    font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $jost;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+a {
+    color: $gray-600;
+    text-decoration: none !important;
+}
+
+p {
+    line-height: 30px;
+}
+
+ul {
+    li {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        transition: all 0.6s ease-in-out;
+    }
+}
+
+dl,
+ol,
+ul {
+    margin-top: 0;
+    margin-bottom: 0rem;
+    margin-right: 0;
+    margin-left: 0;
+    padding: 0;
+}
+
+a:hover {
+    text-decoration: none;
+    color: $theme-color-1;
+}
+
+.btn:focus {
+    outline: 0px;
+    appearance: none;
+}
+
+:focus {
+    outline: -webkit-focus-ring-color auto 0px;
+}
+
+button:focus {
+    outline: 0px dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+//li (list inline item)
+.list-inline-item:not(:last-child) {
+    margin-right: 0px;
+    margin-bottom: 0px;
+}
+
+// Rounded
+.rounded {
+    border-radius: 5px !important;
+}
+
+.rounded-pill {
+    border-radius: 10px !important;
+}
+
+// Home
+@mixin home-common {
+    background-size: cover;
+    align-self: center;
+    position: relative;
+    background-position: center center;
+}
+
+.bg-home {
+    height: 100vh;
+    @include home-common();
+}
+
+.bg-half-170 {
+    padding: 170px 0;
+    @include home-common();
+}
+
+@media (max-width: 767px) {
+    .bg-home,
+    .bg-half-170 {
+        padding: 150px 0;
+        height: auto;
+    }
+}

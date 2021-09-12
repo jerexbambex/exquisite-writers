@@ -1,0 +1,213 @@
+/*============================================
+
+                 22 -- Feature
+
+==============================================*/
+
+.feature-area {
+    .text {
+        position: relative;
+        padding: 0 0 60px 60px;
+
+        .number {
+            font-family: $jost;
+            font-size: 60px;
+            color: #d8d8d8;
+            position: relative;
+
+            i {
+                font-size: 30px;
+                background-color: #ecf0ff;
+                border-radius: 50px;
+                line-height: 50px;
+                border: 2px solid $theme-color-1;
+                padding: 10px;
+                color: $theme-color-1;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                width: 13px;
+                height: 13px;
+                border-radius: 50%;
+                background: #8ea3ff;
+                opacity: 0.32;
+                top: 35px;
+                left: -67px;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background: #8e90ff;
+                top: 39px;
+                left: -63px;
+                z-index: 1;
+            }
+        }
+
+        .title {
+            font-size: 50px;
+            line-height: 60px;
+
+            @media(max-width: 767px) {
+                font-size: 40;
+                line-height: 50px;
+            }
+        }
+
+        .learn-more {
+            font-family: $barlow;
+            font-size: 22px;
+            color: #3c3c3c;
+
+            i {
+                vertical-align: middle;
+                font-size: 25px;
+                margin-left: 12px;
+            }
+        }
+
+        p {
+            padding: 30px 0;
+        }
+    }
+
+    .single-block {
+        &:nth-child(1) .text {
+            border-left: 1px dashed #dcdcdc;
+            border-bottom: 1px dashed #dcdcdc;
+            border-radius: 0 0 0 20px;
+
+            &:before {
+                content: '';
+                width: 1px;
+                height: 39px;
+                position: absolute;
+                background: #fff;
+                top: 0;
+                left: -1px;
+            }
+        }
+
+        &:nth-child(2) {
+            .img-box {
+                border-right: 1px dashed #dcdcdc;
+                border-radius: 0 20px 20px 0;
+            }
+
+            .text {
+                padding: 80px 40px 55px 45px;
+            }
+        }
+
+        &:nth-child(3) {
+            .text {
+                border-top: 1px dashed #dcdcdc;
+                border-left: 1px dashed #dcdcdc;
+                border-bottom: 1px dashed #dcdcdc;
+                border-radius: 20px 0 0 20px;
+                padding: 80px 0 55px 60px;
+            }
+
+        }
+    }
+
+    &.dark-bg {
+        .text {
+            padding: 0 0 150px 0;
+
+            .number {
+
+                &:before,
+                &:after {
+                    display: none;
+                }
+
+                color: #3d42e0;
+            }
+
+            .title {
+                color: #fff;
+            }
+
+            p {
+                color: #d0d0d9;
+            }
+        }
+
+        .row {
+            margin: 0 -70px;
+
+            [class*="col"] {
+                padding: 0 70px;
+            }
+        }
+
+        padding: 170px 0 80px;
+    }
+}
+
+.pre-card {
+    transition: all 0.5s ease;
+    box-shadow: $shadow;
+
+    .icon {
+        width: 80px;
+        height: 80px;
+        line-height: 72px;
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .content {
+        .title {
+            transition: all 0.5s ease;
+
+            &:hover {
+                color: $theme-color-1 !important;
+            }
+        }
+    }
+
+    &.pre-primary {
+        transition: all 0.5s ease;
+
+        .icon2,
+        .para {
+            color: $gray-500 !important;
+        }
+    }
+
+
+    &:hover {
+        box-shadow: $shadow-lg;
+
+        &.pre-primary {
+            background-color: $theme-color-1 !important;
+            border-radius: 10px !important;
+            color: $white !important;
+
+            .icon2,
+            .para {
+                color: $white !important;
+            }
+
+            .content,
+            .icon2 {
+                z-index: 2;
+            }
+        }
+    }
+}
+
+.media {
+    display: flex;
+    align-items: flex-start;
+}

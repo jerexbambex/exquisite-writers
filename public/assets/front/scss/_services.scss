@@ -1,0 +1,71 @@
+/*============================================
+
+                 10 -- Services
+
+==============================================*/
+.services {
+    transition: all 0.5s ease;
+    .icon {
+        line-height: 72px;
+        border-radius: 10px;
+        transition: all 0.5s ease;
+        img {
+            width: 75px;
+        }
+    }
+    .content {
+        .title {
+            transition: all 0.5s ease;
+            &:hover {
+                color: $theme-color-1 !important;
+            }
+        }
+    }
+    &.serv-primary {
+        transition: all 0.5s ease;
+    }
+    .big-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        opacity: 0.05;
+        font-size: 120px;
+        &.icon-right {
+            top: 10%;
+            right: -20px;
+            left: auto;
+        }
+
+    }
+    .icon2{
+        i{
+            color: $gray-700;
+        }
+    }
+    &:hover {
+        box-shadow: $shadow-lg;
+        &.serv-primary {
+            background-color: #5E79F3 !important;
+            border-radius: 10px !important;
+            color: $white !important;
+            .icon2, 
+            .para {
+                color: rgba($white, 0.5) !important;
+            }
+            .content,
+            .icon2 {
+                z-index: 2;
+            }
+            .icon2{
+                i{
+                    transition: all 0.5s ease;
+                    color: $white;
+                }
+            }
+        }
+        .big-icon {
+            opacity: 0.05;
+        }
+    }
+}

@@ -1,0 +1,425 @@
+/*============================================
+
+                 08 -- Portfolio
+
+==============================================*/
+/*-- Fliter --*/
+.filter-group {
+    text-align: center;
+    margin-bottom: 40px;
+
+    .list-control {
+        display: inline-block;
+        border-radius: 30px;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-right: 16px;
+            padding: 0px 0px 3px 0;
+            border-radius: 30px;
+            cursor: pointer;
+            display: inherit;
+            position: relative;
+            color: $gray-700;
+            text-transform: capitalize;
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: 1px;
+
+            &::before {
+                position: absolute;
+                content: "";
+                width: 100%;
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                transition: 0.5s;
+                transform: scaleX(0);
+                background: $theme-color-1 !important;
+                opacity: 0;
+            }
+
+            &.active {
+                color: $theme-color-1;
+
+                &::before {
+                    transform: scaleX(1);
+                    opacity: 1;
+                    color: $theme-color-1 !important;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+}
+
+/*-- Hover Style - 1 --*/
+
+.single-item {
+    overflow: hidden;
+
+    .pro-content-hover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: auto;
+        background: #fff;
+        text-align: left;
+        z-index: 1;
+        height: calc(100% - 40px);
+        width: calc(100% - 40px);
+        margin: 20px;
+        bottom: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 30px;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        padding-right: 15px;
+
+        h3 {
+            margin-bottom: 8px;
+            font-size: 26px;
+
+            @media #{$xs-layout} {
+                margin-bottom: 4px;
+                font-size: 17px;
+
+            }
+
+            @media #{$md-layout} {
+                font-size: 20px;
+            }
+
+            @media #{$layout-479} {
+                margin-bottom: 5px;
+                font-size: 20px;
+            }
+        }
+
+        h5 {
+            font-style: italic;
+            font-family: $barlow;
+            font-weight: 400;
+
+            @media #{$xs-layout} {
+                font-size: 14px;
+
+            }
+
+            @media #{$md-layout} {
+                font-size: 15px;
+            }
+
+            @media #{$layout-479} {
+                font-size: 16px;
+            }
+
+        }
+    }
+
+    .pro-img {
+        overflow: hidden;
+
+        img {
+            transform: translate3d(0, 0, 0) scale(1.1);
+            transition: transform 0.5s cubic-bezier(0.33, 0.02, 0, 0.93);
+        }
+    }
+}
+
+
+.single-item:hover {
+    .pro-content-hover {
+        opacity: 1;
+    }
+
+    .pro-img img {
+        transform: translate3d(15px, 0, 0) scale(1.1);
+    }
+}
+
+
+.fix {
+    overflow: hidden;
+}
+
+/*-- Hover style - 2 --*/
+
+.hover-st2 {
+    .pro-content-hover {
+        position: absolute;
+        left: 0;
+        margin: auto;
+        background: #fff;
+        text-align: center;
+        z-index: 1;
+        height: auto;
+        width: 100%;
+        margin: 0;
+        bottom: -100px;
+        right: 0;
+        padding-left: 30px;
+        opacity: 0;
+        top: auto;
+
+        @media #{$md-layout} {
+            padding-left: 15px;
+        }
+
+        h3 {
+            color: #222;
+
+            @media #{$lg-layout} {
+                font-size: 25px;
+            }
+
+            @media #{$md-layout} {
+                font-size: 17px;
+            }
+        }
+
+        h5 {
+            @media #{$md-layout} {
+                font-size: 14px;
+            }
+
+        }
+    }
+
+    .pro-img {
+        overflow: hidden;
+
+        img {
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            top: 0;
+        }
+    }
+}
+
+
+.hover-st2 .single-item {
+    &:hover .pro-img img {
+        top: -101px;
+
+        @media #{$md-layout} {
+            top: -65px;
+        }
+    }
+
+    .pro-img img {
+        transform: none;
+    }
+
+    &:hover {
+        .pro-img img {
+            transform: none;
+        }
+
+        .pro-content-hover {
+            bottom: 26px;
+
+            @media #{$md-layout} {
+                bottom: 13px;
+
+            }
+        }
+    }
+}
+
+.four-column {
+    .pro-content-hover {
+
+        h5 {
+            @media #{$lg-layout} {
+                font-size: 16px;
+            }
+        }
+
+        h5 {
+            @media #{$lg-layout} {
+                font-size: 20px;
+            }
+        }
+    }
+
+    .hover-st2 .pro-content-hover {
+
+        h5 {
+            @media #{$lg-layout} {
+                font-size: 16px;
+            }
+        }
+
+        h3 {
+            font-size: 24px;
+
+            @media #{$lg-layout} {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media #{$lg-layout} {
+
+    .four-column.hover-st2 .single-item:hover .pro-img img {
+        top: -68px;
+    }
+
+    .four-column.hover-st2 .single-item:hover .pro-content-hover {
+        bottom: 14px;
+    }
+}
+
+
+
+@media #{$md-layout} {
+
+    .four-column .pro-content-hover h5 {
+        font-size: 16px;
+    }
+
+    .four-column .pro-content-hover h3,
+    .four-column.hover-st2 .pro-content-hover h3 {
+        font-size: 17px;
+        margin-bottom: 4px;
+    }
+
+    .four-column.hover-st2 .single-item:hover .pro-img img {
+        top: -58px;
+    }
+
+    .four-column.hover-st2 .single-item:hover .pro-content-hover {
+        bottom: 14px;
+    }
+
+    .four-column .pro-content-hover h5 {
+        font-size: 14px;
+    }
+}
+
+/*Hover style 3 */
+
+.hover-st3 .single-item {
+    float: left;
+    overflow: hidden;
+    padding: 7px;
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    a {
+        display: block;
+    }
+
+    .post-info .post-categories {
+        margin-bottom: 13px;
+        color: #4e5275;
+        font-size: 14px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        box-shadow: $shadow;
+        transform: translateY(-5px);
+
+        a {
+            cursor: pointer;
+        }
+    }
+}
+
+.video-popup {
+    position: relative;
+
+    &::before {
+        content: "";
+        background: $gray-700;
+        left: 0;
+        top: 0;
+        width: 100%;
+        position: absolute;
+        height: 100%;
+        z-index: 2;
+        opacity: 0.4;
+    }
+}
+
+.pro-img {
+    .margin-minus-7 {
+        margin: -7px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    a {
+        display: block;
+
+        i {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 50px;
+            height: 50px;
+            color: $gray-600;
+            display: block;
+            z-index: 9;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 35px;
+            font-size: 42px;
+            background: #fff;
+        }
+    }
+}
+
+/*-- Custom Col --*/
+
+.masonry-wrap-active {
+    &.four-column .single-item {
+        width: 24%;
+    }
+
+    &.two-column .single-item {
+        width: 49%;
+    }
+
+    &.three-column .single-item {
+        width: 33%;
+
+        @media #{$layout-575} {
+            width: 50% !important;
+
+        }
+
+        @media #{$layout-479} {
+            width: 100% !important;
+        }
+
+    }
+
+    .single-item {
+        padding: 7px;
+
+        @media #{$layout-575} {
+            width: 50% !important;
+        }
+
+        @media #{$layout-479} {
+            width: 100% !important;
+        }
+
+    }
+}
