@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Circular-regular;
+    src: url(fonts/Circular\ Std\ Book.ttf);
+}
+
+@font-face {
+    font-family: Circular-bold;
+    src: url(fonts/Circular\ Std\ Medium.ttf);
+}
+
+.font-circular-regular {
+    font-family: 'Circular-regular';
+}
+
+.font-circular-head {
+    font-family: 'Circular-bold';
+}
+
+.my-h1 {
+    line-height: 1.25;
+    letter-spacing: -.02em;
+    font-weight: normal !important;
+}
+
+.my-btn {
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-width: 1px;
+    border-color: transparent;
+    line-height: 1.375;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: .15s;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+
+.active {
+    color: #0F172A;
+}

@@ -1,4 +1,4 @@
-{{--<base href="../../">--}}
+{{-- <base href="../../"> --}}
 {{-- <meta charset="utf-8"> --}}
 {{-- <meta name="author" content="FEGOCOOSA"> --}}
 {{-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> --}}
@@ -17,12 +17,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="description" content="">
 <!-- Fav Icon  -->
-<link rel="shortcut icon" href="/admin/images/favicon.png">
+<link rel="shortcut icon" href="/assets/admin/images/favicon.png">
 <!-- Page Title  -->
-<title>Fursee Dashboard | Welcome</title>
+<title>Exquisite Writer Dashboard | Welcome</title>
 <!-- StyleSheets  -->
-<link rel="stylesheet" href="/admin/assets/css/dashlite.css?ver=2.4.0">
-<link id="skin-default" rel="stylesheet" href="/admin/assets/css/theme.css?ver=2.4.0">
+<link rel="stylesheet" href="/assets/admin/assets/css/dashlite.css?ver=2.4.0">
+<link id="skin-default" rel="stylesheet" href="/assets/admin/assets/css/theme.css?ver=2.4.0">
 <link id="skin-default" rel="stylesheet" href="/mine/mine.css">
-@livewireStyles
+{{-- @livewireStyles --}}
 {{-- @toastr_css --}}

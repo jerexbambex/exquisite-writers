@@ -35,8 +35,8 @@
                 <ul class="navigation-menu nav-light">
                     <!-- Home -->
                     <li class="">
-                        <a href=" javascript:void(0)">Home</a><span
-                            class="menu-arrow"></span>
+                        <a href=" javascript:void(0)">Home</a>
+                        <span class="menu-arrow"></span>
                     </li>
                     <!-- /Home -->
                     <!-- Shop -->
