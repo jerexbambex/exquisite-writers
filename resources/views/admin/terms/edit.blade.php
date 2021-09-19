@@ -51,7 +51,7 @@
                                         id="form-submit">
                                         @csrf
                                         @method('PATCH')
-                                        <textarea class="summernote-basic" name="body" id=""
+                                        <textarea class="summernote-basic entry" name="body" id="summernote"
                                             rows="200">{{ $term->body }}</textarea>
                                         <button class="mt-2 btn btn-lg btn-primary" id="submitButton"
                                             onclick="event.preventDefault(); document.getElementById('form-submit').submit(); return DisplayProgressMessage(this, 'Updating...');">Update</button>
@@ -83,4 +83,10 @@
     <link rel="stylesheet" href="/assets/admin/assets/css/editors/summernote.css?ver=2.4.0">
     <script src="/assets/admin/assets/js/libs/editors/summernote.js?ver=2.4.0"></script>
     <script src="/assets/admin/assets/js/editors.js?ver=2.4.0"></script>
+
+    <script>
+        $('#summernote').summernote({
+            tabsize: 2,
+        });
+    </script>
 @endpush

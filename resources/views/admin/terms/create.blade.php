@@ -83,4 +83,21 @@
     <link rel="stylesheet" href="/assets/admin/assets/css/editors/summernote.css?ver=2.4.0">
     <script src="/assets/admin/assets/js/libs/editors/summernote.js?ver=2.4.0"></script>
     <script src="/assets/admin/assets/js/editors.js?ver=2.4.0"></script>
+
+    <script>
+        $('#summernote').summernote({
+            tabsize: 2,
+            lineHeights: ['0.2', '0.3', '0.4', '0.5', '0.6', '0.8', '1.0', '1.2', '1.4', '1.5', '2.0', '3.0'],
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['fontsize', ['8', '9', '10', '11', '12', '14', '16', '18', '20']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
+        });
+    </script>
 @endpush

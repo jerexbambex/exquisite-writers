@@ -3,12 +3,14 @@
     <div class="container-fluid">
         <div class="nk-header-wrap">
             <div class="nk-menu-trigger d-xl-none ml-n1">
-                <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em class="icon ni ni-menu"></em></a>
+                <a href="#" class="nk-nav-toggle nk-quick-nav-icon" data-target="sidebarMenu"><em
+                        class="icon ni ni-menu"></em></a>
             </div>
             <div class="nk-header-brand d-xl-none">
                 <a href="html/index.html" class="logo-link">
                     <img class="logo-light logo-img" src="./images/logo.png" srcset="./images/logo2x.png 2x" alt="logo">
-                    <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x" alt="logo-dark">
+                    <img class="logo-dark logo-img" src="./images/logo-dark.png" srcset="./images/logo-dark2x.png 2x"
+                        alt="logo-dark">
                 </a>
             </div><!-- .nk-header-brand -->
             <div class="nk-header-news d-none d-xl-block">
@@ -18,7 +20,8 @@
                             <em class="icon ni ni-card-view"></em>
                         </div>
                         <div class="nk-news-text">
-                            <p>Do you know the latest update of 2019? <span> A overview of our is now available on YouTube</span></p>
+                            <p>Do you know the latest update of 2019? <span> A overview of our is now available on
+                                    YouTube</span></p>
                             <em class="icon ni ni-external"></em>
                         </div>
                     </a>
@@ -52,10 +55,28 @@
                             </div>
                             <div class="dropdown-inner">
                                 <ul class="link-list">
-                                    <li><a href="html/user-profile-regular.html"><em class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
-                                    <li><a href="html/user-profile-setting.html"><em class="icon ni ni-setting-alt"></em><span>Account Setting</span></a></li>
-                                    <li><a href="html/user-profile-activity.html"><em class="icon ni ni-activity-alt"></em><span>Login Activity</span></a></li>
-                                    <li><a class="dark-switch" href="#"><em class="icon ni ni-moon"></em><span>Dark Mode</span></a></li>
+                                    <li><a href="html/user-profile-regular.html"><em
+                                                class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
+                                    <li><a href="html/user-profile-setting.html"><em
+                                                class="icon ni ni-setting-alt"></em><span>Account Setting</span></a>
+                                    </li>
+                                    <li><a href="html/user-profile-activity.html"><em
+                                                class="icon ni ni-activity-alt"></em><span>Login Activity</span></a>
+                                    </li>
+                                    <li>
+                                        <form method="POST" action="{{ route('mode', Auth::user()->id) }}"
+                                            id="mode-switch">
+                                            @csrf
+                                            @method('patch')
+                                            <a class="dark-switch {{ Auth::user()->mode == 'dark' ? 'active' : '' }} "
+                                                href="javascrip:void(0)" onclick="event.preventDefault();
+                                                                document.getElementById('mode-switch').submit();">
+                                                <em class="icon ni ni-moon"></em>
+                                                <span>Dark Mode</span>
+                                            </a>
+                                        </form>
+                                        {{-- <a class="dark-switch" href="#"><em class="icon ni ni-moon"></em><span>Dark Mode</span></a> --}}
+                                    </li>
                                 </ul>
                             </div>
                             <div class="dropdown-inner">
@@ -81,7 +102,8 @@
                                             <em class="icon icon-circle bg-warning-dim ni ni-curve-down-right"></em>
                                         </div>
                                         <div class="nk-notification-content">
-                                            <div class="nk-notification-text">You have requested to <span>Widthdrawl</span></div>
+                                            <div class="nk-notification-text">You have requested to
+                                                <span>Widthdrawl</span></div>
                                             <div class="nk-notification-time">2 hrs ago</div>
                                         </div>
                                     </div>
@@ -90,7 +112,8 @@
                                             <em class="icon icon-circle bg-success-dim ni ni-curve-down-left"></em>
                                         </div>
                                         <div class="nk-notification-content">
-                                            <div class="nk-notification-text">Your <span>Deposit Order</span> is placed</div>
+                                            <div class="nk-notification-text">Your <span>Deposit Order</span> is placed
+                                            </div>
                                             <div class="nk-notification-time">2 hrs ago</div>
                                         </div>
                                     </div>
@@ -99,7 +122,8 @@
                                             <em class="icon icon-circle bg-warning-dim ni ni-curve-down-right"></em>
                                         </div>
                                         <div class="nk-notification-content">
-                                            <div class="nk-notification-text">You have requested to <span>Widthdrawl</span></div>
+                                            <div class="nk-notification-text">You have requested to
+                                                <span>Widthdrawl</span></div>
                                             <div class="nk-notification-time">2 hrs ago</div>
                                         </div>
                                     </div>
@@ -108,7 +132,8 @@
                                             <em class="icon icon-circle bg-success-dim ni ni-curve-down-left"></em>
                                         </div>
                                         <div class="nk-notification-content">
-                                            <div class="nk-notification-text">Your <span>Deposit Order</span> is placed</div>
+                                            <div class="nk-notification-text">Your <span>Deposit Order</span> is placed
+                                            </div>
                                             <div class="nk-notification-time">2 hrs ago</div>
                                         </div>
                                     </div>
@@ -117,7 +142,8 @@
                                             <em class="icon icon-circle bg-warning-dim ni ni-curve-down-right"></em>
                                         </div>
                                         <div class="nk-notification-content">
-                                            <div class="nk-notification-text">You have requested to <span>Widthdrawl</span></div>
+                                            <div class="nk-notification-text">You have requested to
+                                                <span>Widthdrawl</span></div>
                                             <div class="nk-notification-time">2 hrs ago</div>
                                         </div>
                                     </div>
@@ -126,7 +152,8 @@
                                             <em class="icon icon-circle bg-success-dim ni ni-curve-down-left"></em>
                                         </div>
                                         <div class="nk-notification-content">
-                                            <div class="nk-notification-text">Your <span>Deposit Order</span> is placed</div>
+                                            <div class="nk-notification-text">Your <span>Deposit Order</span> is placed
+                                            </div>
                                             <div class="nk-notification-time">2 hrs ago</div>
                                         </div>
                                     </div>

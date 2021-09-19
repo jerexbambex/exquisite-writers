@@ -18,6 +18,8 @@ require __DIR__.'/auth.php';
 
 Route::prefix('/admin')->group(function () {
     Route::get('/', [AdminHomeController::class, 'index'])->name('adminIndex');
+    
+    Route::patch('/mode/{user}', [AdminHomeController::class, 'mode'])->name('mode');
 
     // Terms
     Route::get('/terms', [AdminTermsController::class, 'index'])->name('adminTermsIndex');

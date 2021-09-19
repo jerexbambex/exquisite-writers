@@ -35,11 +35,13 @@
                             <div class="nk-block">
                                 <div class="card card-bordered">
                                     <div class="card-inner card-inner-xl">
-                                        <div class="entry">
-                                            <a href="{{ route('adminTermsEdit', $term->id) }}"
-                                                class="mt-2 btn btn-lg btn-primary">Edit</a>
+                                        <a href="{{ route('adminTermsEdit', $term->id) }}"
+                                            class="mt-2 btn btn-lg btn-primary">Edit</a>
+                                        <div class="mt-5 entry">
                                             {!! nl2br($term->body) !!}
                                         </div>
+                                        <a href="{{ route('adminTermsEdit', $term->id) }}"
+                                            class="mt-5 btn btn-lg btn-primary">Edit</a>
                                     </div><!-- .card-inner -->
                                 </div><!-- .card -->
                             </div><!-- .nk-block -->

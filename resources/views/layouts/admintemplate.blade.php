@@ -5,7 +5,9 @@
     @include('layouts.admin.partials._head')
 </head>
 
-<body class="nk-body bg-lighter npc-general has-sidebar font-circular-regular" id="app">
+<body
+    class="nk-body bg-lighter npc-general has-sidebar font-circular-regular {{ Auth::user()->theme == 'dark' ? 'dark-mode' : '' }}"
+    id="app">
     <div class="nk-app-root">
         <!-- main @s -->
         <div class="nk-main ">
