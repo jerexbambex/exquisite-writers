@@ -33,8 +33,8 @@
                         <a href="index.html"><img src="images/logo-light.png" alt="" class="logo-light"
                                 height="22" /></a>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.Duis tempus eleifend tortor, vel molestie
-                        orci feugiat sit amet. Donec posuere rhoncus tempus.</p>
+                    <p><a href="{{ route('privacy') }}" style="text-decoration: none; color: #fdf9f9">Privacy &
+                            Policy</a></p>
                 </div>
             </div>
             <!-- /row -->
