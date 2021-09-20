@@ -45,7 +45,39 @@
             <div class="row">
                 <div class="mx-auto col-lg-8 col-md-7 col-12">
                     <div class="abt-content">
-                        {!! nl2br($privacy->body) !!}
+                        @if ($privacy == null)
+                            <!-- 404 -->
+                            <section class="bg-home d-flex align-items-center">
+                                <!-- container -->
+                                <div class="container">
+                                    <!-- row -->
+                                    <div class="row justify-content-center">
+                                        <!-- col -->
+                                        <div class="col-12">
+                                            <div class="text-center">
+                                                <img src="images/bg/404.png" class="img-fluid" alt="">
+
+                                                <div class="mt-5">
+                                                    <h3>Waiting for the Admin to add the Policy</h3>
+                                                    <p class="mx-auto text-muted para-desc">
+                                                        You will get it shortly
+                                                    </p>
+
+                                                    <a href="/" class="mt-2 btn theme-btn">Go to
+                                                        Home</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /col -->
+                                    </div>
+                                    <!-- /row -->
+                                </div>
+                                <!-- /container -->
+                            </section>
+                            <!-- /404 -->
+                        @else
+                            {!! nl2br($privacy->body) !!}
+                        @endif
                     </div>
                 </div>
             </div>
