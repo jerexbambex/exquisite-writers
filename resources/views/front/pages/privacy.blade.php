@@ -55,7 +55,7 @@
                                         <!-- col -->
                                         <div class="col-12">
                                             <div class="text-center">
-                                                <img src="images/bg/404.png" class="img-fluid" alt="">
+                                                <img src="/assets/front/images/bg/404.png" class="img-fluid" alt="">
 
                                                 <div class="mt-5">
                                                     <h3>Waiting for the Admin to add the Policy</h3>
