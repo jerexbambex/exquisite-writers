@@ -11,13 +11,13 @@
                         <div class="nk-block-head nk-block-head-lg wide-sm">
                             <div class="nk-block-head-content">
                                 <div class="nk-block-head-sub"><a class="back-to"
-                                        href="{{ route('adminTermsIndex') }}"><em
-                                            class="icon ni ni-arrow-left"></em><span>Components</span></a></div>
-                                <h2 class="nk-block-title fw-normal">Privacy Statement</h2>
+                                        href="{{ route('adminAboutIndex') }}"><em
+                                            class="icon ni ni-arrow-left"></em><span>Back</span></a></div>
+                                <h2 class="nk-block-title fw-normal">About Us</h2>
                                 <div class="nk-block-des">
-                                    <p class="lead">Using the <a href="" target="_blank">quilljs</a> plugin, you
-                                        can simply make some awesome rich text
-                                        editor.</p>
+                                    <p class="lead">
+                                        {{ $about->preamble }}
+                                    </p>
                                 </div>
                             </div>
                         </div><!-- .nk-block-head -->
@@ -47,12 +47,19 @@
                                         </div>
                                     @endif
                                     <!-- Create the editor container -->
-                                    <form method="POST" action="{{ route('adminTermsUpdate', $term->id) }}"
+                                    <form method="POST" action="{{ route('adminAboutUpdate', $about->id) }}"
                                         id="form-submit">
                                         @csrf
                                         @method('PATCH')
+                                        <div class="form-group">
+                                            <label class="form-label" for="default-1-01">Preamble Text</label>
+                                            <div class="form-control-wrap">
+                                                <input type="text" name="preamble" class="form-control form-control-lg" placeholder="Input Large" value="{{ $about->preamble }}">
+                                            </div>
+                                        </div>
+                                        <label class="form-label" for="default-1-01">Body</label>
                                         <textarea class="summernote-basic entry" name="body" id="summernote"
-                                            rows="200">{{ $term->body }}</textarea>
+                                            rows="200">{{ $about->body }}</textarea>
                                         <button class="mt-2 btn btn-lg btn-primary" id="submitButton"
                                             onclick="event.preventDefault(); document.getElementById('form-submit').submit(); return DisplayProgressMessage(this, 'Updating...');">Update</button>
                                     </form>
@@ -87,6 +94,8 @@
     <script>
         $('#summernote').summernote({
             tabsize: 2,
+            lineHeights: ['0.2', '0.3', '0.4', '0.5', '0.6', '0.8', '1.0', '1.2', '1.4', '1.5', '2.0', '3.0'],
+            fontsize: ['8', '9', '10', '11', '12', '14', '16', '18', '20'],
             toolbar: [
                 ['style', ['bold', 'italic', 'underline', 'clear']],
                 ['height', ['height']],

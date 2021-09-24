@@ -89,9 +89,9 @@
             tabsize: 2,
             lineHeights: ['0.2', '0.3', '0.4', '0.5', '0.6', '0.8', '1.0', '1.2', '1.4', '1.5', '2.0', '3.0'],
             toolbar: [
-                ['style', ['style']],
-                ['font', ['bold', 'underline', 'clear']],
-                ['fontsize', ['8', '9', '10', '11', '12', '14', '16', '18', '20']],
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['height', ['height']],
+                ['fontname', ['fontname', 'fontsize']],
                 ['color', ['color']],
                 ['para', ['ul', 'ol', 'paragraph']],
                 ['table', ['table']],

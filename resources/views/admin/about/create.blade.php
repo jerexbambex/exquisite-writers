@@ -11,13 +11,11 @@
                         <div class="nk-block-head nk-block-head-lg wide-sm">
                             <div class="nk-block-head-content">
                                 <div class="nk-block-head-sub"><a class="back-to"
-                                        href="{{ route('adminTermsIndex') }}"><em
-                                            class="icon ni ni-arrow-left"></em><span>Components</span></a></div>
-                                <h2 class="nk-block-title fw-normal">Privacy Statement</h2>
+                                        href="{{ route('adminAboutIndex') }}"><em
+                                            class="icon ni ni-arrow-left"></em><span>Back</span></a></div>
+                                <h2 class="nk-block-title fw-normal">About us</h2>
                                 <div class="nk-block-des">
-                                    <p class="lead">Using the <a href="" target="_blank">quilljs</a> plugin, you
-                                        can simply make some awesome rich text
-                                        editor.</p>
+                                    
                                 </div>
                             </div>
                         </div><!-- .nk-block-head -->
@@ -47,14 +45,20 @@
                                         </div>
                                     @endif
                                     <!-- Create the editor container -->
-                                    <form method="POST" action="{{ route('adminTermsUpdate', $term->id) }}"
-                                        id="form-submit">
+                                    <form method="POST" action="{{ route('adminAboutStore') }}" id="form-submit">
                                         @csrf
-                                        @method('PATCH')
-                                        <textarea class="summernote-basic entry" name="body" id="summernote"
-                                            rows="200">{{ $term->body }}</textarea>
+                                        <div class="form-group">
+                                            <label class="form-label" for="default-1-01">Preamble Text</label>
+                                            <div class="form-control-wrap">
+                                                <input type="text" name="preamble" class="form-control form-control-lg" placeholder="Welcome text">
+                                            </div>
+                                        </div>
+                                        <label class="form-label" for="default-1-01">Body</label>
+                                        <textarea class="summernote-basic" name="body" id=""
+                                            rows="300">Start Typing</textarea>
                                         <button class="mt-2 btn btn-lg btn-primary" id="submitButton"
-                                            onclick="event.preventDefault(); document.getElementById('form-submit').submit(); return DisplayProgressMessage(this, 'Updating...');">Update</button>
+                                            onclick="event.preventDefault(); document.getElementById('form-submit').submit(); return DisplayProgressMessage(this, 'Adding...');">Add
+                                            Statement</button>
                                     </form>
                                 </div>
                             </div>
@@ -65,6 +69,7 @@
         </div>
     </div>
     <!-- content @e -->
+
 
     <script>
         function DisplayProgressMessage(ctl, msg) {
@@ -87,6 +92,7 @@
     <script>
         $('#summernote').summernote({
             tabsize: 2,
+            lineHeights: ['0.2', '0.3', '0.4', '0.5', '0.6', '0.8', '1.0', '1.2', '1.4', '1.5', '2.0', '3.0'],
             toolbar: [
                 ['style', ['bold', 'italic', 'underline', 'clear']],
                 ['height', ['height']],
