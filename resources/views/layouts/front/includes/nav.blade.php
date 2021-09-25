@@ -54,7 +54,7 @@
                         <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
                     </li>
                     <!-- /Page -->
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="{{ route('contactUs') }}">Contact</a></li>
                 </ul>
                 <!-- /Navigation Menu -->
             </div>

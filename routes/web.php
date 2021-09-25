@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\AdminAboutController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminTermsController;
 use App\Http\Controllers\Front\AboutController;
+use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,6 +19,7 @@ Route::get('/', function () {
  */
 Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
 Route::get('/aboutus', [AboutController::class, 'show'])->name('aboutUs');
+Route::get('/contactus', [ContactController::class, 'show'])->name('contactUs');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
