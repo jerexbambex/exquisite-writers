@@ -51,7 +51,7 @@
 
                     <!-- Page -->
                     <li class="">
-                        <a href="javascript:void(0)">Pages</a><span class="menu-arrow"></span>
+                        <a href="{{ route('blogIndex') }}">Blog</a><span class="menu-arrow"></span>
                     </li>
                     <!-- /Page -->
                     <li><a href="{{ route('contactUs') }}">Contact</a></li>
