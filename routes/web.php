@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\AdminTermsController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\ContactController;
 use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Front\BlogController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -21,6 +22,12 @@ Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
 Route::get('/aboutus', [AboutController::class, 'show'])->name('aboutUs');
 Route::get('/contactus', [ContactController::class, 'show'])->name('contactUs');
 
+// Blogs
+Route::get('/blogs', [BlogController::class, 'index'])->name('blogIndex');
+Route::get('/blogs/{blog}', [BlogController::class, 'show'])->name('blogShow');
+
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -29,7 +36,7 @@ require __DIR__.'/auth.php';
 
 Route::prefix('/admin')->middleware(['auth'])->group(function () {
     Route::get('/', [AdminHomeController::class, 'index'])->name('adminIndex');
-    
+
     Route::patch('/mode/{user}', [AdminHomeController::class, 'mode'])->name('mode');
 
     // Terms

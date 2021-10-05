@@ -47,7 +47,7 @@
                 <li><a href="#"><i class="ri-twitter-line"></i></a></li>
                 <li><a href="#"><i class="ri-youtube-line"></i></a></li>
             </ul>
-            <p class="copyright-text ">&copy; 2020 Aloa all right reserved designed by Aacvo
+            <p class="copyright-text ">&copy; {{ date('Y') }} Exquisite Writers all right reserved designed by <a href="https://furseeinc.com"> FurseeInc. </a>
             </p>
         </div>
         <!-- /Container -->
