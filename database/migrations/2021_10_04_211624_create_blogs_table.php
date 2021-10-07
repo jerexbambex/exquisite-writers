@@ -21,6 +21,7 @@ class CreateBlogsTable extends Migration
             $table->longText('body');
             $table->string('avatar')->nullable();
             $table->timestamps();
+
         });
     }
 
