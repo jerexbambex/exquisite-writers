@@ -1,7 +1,6 @@
 @extends('layouts.admintemplate')
 
 @section('content')
-    <script src="https://cdn.tiny.cloud/1/skfrbrhb18mdqaudmp4i5ubffljrxf9x77bndty9vvw0unjl/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <div class="nk-block-head nk-block-head-sm">
         <div class="nk-block-between">
             <div class="nk-block-head-content">
@@ -17,7 +16,7 @@
                     <div class="toggle-expand-content" data-content="pageMenu">
                         <ul class="nk-block-tools g-3">
                             <li>
-                                <a href="{{ route('admin.blog.show', $blog->path()) }}" class="btn btn-secondary">
+                                <a href="{{ route('adminBlogShow', $blog->path()) }}" class="btn btn-secondary">
                                     <em class="icon ni ni-chevron-left-c"></em><span>Back</span>
                                 </a>
                             </li>
@@ -58,7 +57,7 @@
                         </div>
                     @endif
 
-                    <form method="POST" action="{{ route('admin.blog.update', $blog->id) }}" id="form-submit" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('adminBlogUpdate', $blog->id) }}" id="form-submit" enctype="multipart/form-data">
                         @csrf
                         @method('PATCH')
                         <div class="row justify-content-center">
@@ -97,9 +96,21 @@
                             </div>
 
                             <div class="mt-3 col-md-12">
-                        <textarea rows="20" name="body">
-                            {{ $blog->body }}
-                        </textarea>
+                                @foreach ($blog->categories as $category)
+                                    <button class="btn btn-sm btn-light">{{ $category->name }}</button>
+                                @endforeach
+                                <div class="form-group mt-3">
+                                    <label class="form-label">Category</label>
+                                    <div class="form-control-wrap">
+                                        <select class="form-select" multiple="multiple" data-placeholder="Select Multiple options" name="categories[]"
+                                            value="">
+                                            @foreach ($allCategories as $category)
+                                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                                <textarea class="summernote-basic entry" name="body" id="summernote" rows="200">{{ $blog->body }}</textarea>
                             </div>
                             <div class="mt-5 col-12">
                                 <button type="submit" class="btn btn-lg btn-primary" id="submitButton"
@@ -137,11 +148,29 @@
             }
         }
     </script>
+@endsection
+
+@push('scripts')
+    <!-- JavaScript -->
+    <link rel="stylesheet" href="/assets/admin/assets/css/editors/summernote.css?ver=2.4.0">
+    <script src="/assets/admin/assets/js/libs/editors/summernote.js?ver=2.4.0"></script>
+    <script src="/assets/admin/assets/js/editors.js?ver=2.4.0"></script>
+
     <script>
-        tinymce.init({
-            selector: 'textarea',
-            plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-            toolbar_mode: 'floating',
+        $('#summernote').summernote({
+            tabsize: 2,
+            lineHeights: ['0.2', '0.3', '0.4', '0.5', '0.6', '0.8', '1.0', '1.2', '1.4', '1.5', '2.0', '3.0'],
+            fontsize: ['8', '9', '10', '11', '12', '14', '16', '18', '20'],
+            toolbar: [
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['height', ['height']],
+                ['fontname', ['fontname', 'fontsize']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']]
+            ]
         });
     </script>
-@endsection
+@endpush

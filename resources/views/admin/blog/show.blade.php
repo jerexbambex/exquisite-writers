@@ -10,12 +10,12 @@
                     <div class="toggle-expand-content" data-content="pageMenu">
                         <ul class="nk-block-tools g-3">
                             <li>
-                                <a href="{{ route('admin.blog.index') }}" class="btn btn-light">
+                                <a href="{{ route('adminBlogIndex') }}" class="btn btn-light">
                                     <em class="icon ni ni-arrow-left"></em><span>Back</span>
                                 </a>
                             </li>
                             <li>
-                                <a href="{{ route('admin.blog.edit', $blog->path()) }}" class="btn btn-secondary">
+                                <a href="{{ route('adminBlogEdit', $blog->path()) }}" class="btn btn-secondary">
                                     <em class="icon ni ni-edit-alt"></em><span>Edit</span>
                                 </a>
                             </li>
@@ -50,7 +50,7 @@
                     </article>
 
                     <div class="g-3 mt-5">
-                        <a href="{{ route('admin.blog.edit', $blog->path()) }}" class="btn btn-primary">
+                        <a href="{{ route('adminBlogEdit', $blog->path()) }}" class="btn btn-primary">
                             <em class="icon ni ni-edit-alt"></em><span>Edit</span>
                         </a>
                     </div>

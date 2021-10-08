@@ -34,7 +34,7 @@
                         <div class="toggle-expand-content" data-content="pageMenu">
                             <ul class="nk-block-tools g-3">
                                 <li>
-                                    <a href="{{ route('admin.blog.create') }}" class="btn btn-primary">
+                                    <a href="{{ route('adminBlogCreate') }}" class="btn btn-primary">
                                         <em class="icon ni ni-plus"></em><span>Add New Post</span>
                                     </a>
                                 </li>
@@ -57,12 +57,13 @@
                             <div class="card-inner">
                                 <div class="project">
                                     <div class="project-head">
-                                        <a href="{{ route('admin.blog.show', $blog->path()) }}" class="project-title">
+                                        <a href="{{ route('adminBlogShow', $blog->path()) }}" class="project-title">
                                             <div class="project-info">
                                                 <h6 class="title">{{ $blog->title }}</h6>
                                                 <ul class="kanban-item-tags">
-                                                    @foreach ($blog->category as $category)
-                                                        <li><span class="badge badge-dark">{{ $category->name }}</span>
+                                                    @foreach ($blog->categories as $category)
+                                                        <li>
+                                                            <span class="badge badge-dark">{{ $category->name }}</span>
                                                         </li>
                                                     @endforeach
                                                 </ul>
@@ -74,9 +75,9 @@
                                                     class="icon ni ni-more-h"></em></a>
                                             <div class="dropdown-menu dropdown-menu-right" style="">
                                                 <ul class="link-list-opt no-bdr">
-                                                    <li><a href="{{ route('admin.blog.show', $blog->path()) }}"><em
+                                                    <li><a href="{{ route('adminBlogShow', $blog->path()) }}"><em
                                                                 class="icon ni ni-eye"></em><span>View</span></a></li>
-                                                    <li><a href="#"><em class="icon ni ni-edit"></em><span>Edit</span></a>
+                                                    <li><a href="{{ route('adminBlogEdit', $blog->id) }}"><em class="icon ni ni-edit"></em><span>Edit</span></a>
                                                     </li>
                                                     <li><a href="#" class="text-danger" data-toggle="modal"
                                                             data-target="#subscription-cancel{{ $blog->id }}"><em
@@ -129,7 +130,7 @@
                                     <a href="#" class="btn btn-light" data-dismiss="modal">Never mind, don't delete</a>
                                 </li>
                             </ul>
-                            <form method="POST" action="{{ route('admin.blog.delete', $blog->id) }}"
+                            <form method="POST" action="{{ route('adminBlogDelete', $blog->id) }}"
                                 id="subscription-cancel-confirmed{{ $blog->id }}">
                                 @csrf
                                 @method('DELETE')

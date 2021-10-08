@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminAboutController;
-use App\Http\Controllers\Admin\AdminHomeController;
-use App\Http\Controllers\Admin\AdminTermsController;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Front\BlogController;
+use App\Http\Controllers\Front\HomeController;
 use App\Http\Controllers\Front\AboutController;
 use App\Http\Controllers\Front\ContactController;
-use App\Http\Controllers\Front\HomeController;
-use App\Http\Controllers\Front\BlogController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminBlogController;
+use App\Http\Controllers\Admin\AdminHomeController;
+use App\Http\Controllers\Admin\AdminAboutController;
+use App\Http\Controllers\Admin\AdminTermsController;
 
 
 
@@ -52,4 +53,12 @@ Route::prefix('/admin')->middleware(['auth'])->group(function () {
     Route::post('/about', [AdminAboutController::class, 'store'])->name('adminAboutStore');
     Route::get('/about/edit/{about}', [AdminAboutController::class, 'edit'])->name('adminAboutEdit');
     Route::patch('/about/{about}', [AdminAboutController::class, 'update'])->name('adminAboutUpdate');
+
+    Route::get('/blogs', [AdminBlogController::class, 'index'])->name('adminBlogIndex');
+    Route::get('/blogs/create', [AdminBlogController::class, 'create'])->name('adminBlogCreate');
+    Route::post('/blogs', [AdminBlogController::class, 'store'])->name('adminBlogStore');
+    Route::get('/blogs/{blog}', [AdminBlogController::class, 'show'])->name('adminBlogShow');
+    Route::get('/blogs/edit/{blog}', [AdminBlogController::class, 'edit'])->name('adminBlogEdit');
+    Route::patch('/blogs/update/{blog}', [AdminBlogController::class, 'update'])->name('adminBlogUpdate');
+    Route::delete('/blogs/{blog}', [AdminBlogController::class, 'destroy'])->name('adminBlogDelete');
 });

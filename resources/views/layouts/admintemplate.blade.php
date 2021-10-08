@@ -33,8 +33,8 @@
                 <div class="nk-footer">
                     <div class="container-fluid">
                         <div class="nk-footer-wrap">
-                            <div class="nk-footer-copyright"> &copy; {{ date('Y') }} FEGOCOOSA. Powered by <a
-                                    href="#">Fursee Inc.</a>
+                            <div class="nk-footer-copyright"> &copy; {{ date('Y') }} Exquisite Writers. Powered by <a
+                                    href="https://furseeinc.com">Fursee Inc.</a>
                             </div>
                             <div class="nk-footer-links">
                                 <ul class="nav nav-sm">

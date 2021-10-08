@@ -12,8 +12,8 @@
                 <div class="col-lg-12">
                     <div class="title-heading text-center text-md-center">
                         <h3>Blog</h3>
-                        <p class="text-muted text-center text-md-center mt-2 mb-0">Lorem ipsum dolor sit amet,
-                            consectetur adipiscing elit.
+                        <p class="text-muted text-center text-md-center mt-2 mb-0">
+                            Building your authority with content is the key to any business. The Exquisite Writers' Blog provides pratical, real-world tips on how you can build an online following and increase traffic for all those who need it.
                         </p>
                         <nav aria-label="breadcrumb" class="d-inline-block mt-2">
                             <ul class="breadcrumb mb-0">
@@ -74,7 +74,7 @@
                         <div class="single-blog-post">
                             <div class="post-image">
                                 <a href="{{ route('blogShow', $blog->path()) }}">
-                                    <img src="/assets/front/images/blog/blog1.jpg" alt="image">
+                                    <img src="{{ $blog->avatar() }}" alt="image">
                                 </a>
                             </div>
                             <div class="post-content">
