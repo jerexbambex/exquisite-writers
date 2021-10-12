@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\AdminBlogController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminAboutController;
 use App\Http\Controllers\Admin\AdminTermsController;
+use App\Http\Controllers\Admin\AdminCategoryController;
 
 
 
@@ -61,4 +62,8 @@ Route::prefix('/admin')->middleware(['auth'])->group(function () {
     Route::get('/blogs/edit/{blog}', [AdminBlogController::class, 'edit'])->name('adminBlogEdit');
     Route::patch('/blogs/update/{blog}', [AdminBlogController::class, 'update'])->name('adminBlogUpdate');
     Route::delete('/blogs/{blog}', [AdminBlogController::class, 'destroy'])->name('adminBlogDelete');
+
+    Route::get('/categories', [AdminCategoryController::class, 'index'])->name('adminCategoryIndex');
+    Route::post('/categories', [AdminCategoryController::class, 'store'])->name('adminCategoryStore');
+    Route::patch('/categories/{category}', [AdminCategoryController::class, 'update'])->name('adminCategoryUpdate');
 });
