@@ -21,6 +21,10 @@ class Blog extends Model
         self::creating(function ($model) {
             $model->slug = (string) Str::of($model->title)->slug('-');
         });
+
+        self::updating(function ($model) {
+            $model->slug = (string) Str::of($model->title)->slug('-');
+        });
     }
 
     public function path()

@@ -11,8 +11,7 @@
                 <!-- col -->
                 <div class="col-lg-5">
                     <div class="hero-1-content wow fadeInLeft animated">
-                        <h1 class="title wow fadeInUp animated" data-wow-delay="0.4s">A Smiple And Smart Tools That
-                            will help you to grow your business</h1>
+                        <h1 class="title wow fadeInUp animated" data-wow-delay="0.4s">When you need content written, hire an Exquisite Writer</h1>
                         <p class=" wow fadeInUp animated" data-wow-delay="0.6s">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
