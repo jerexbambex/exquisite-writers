@@ -7,7 +7,7 @@
             padding: .5rem 0;
         }
     </style>
-    <form action="{{ route('adminProfileUpdate', $user->id) }}" method="POST">
+    <form action="{{ route('adminProfileUpdate', $user->id) }}" method="POST" id="form-submit" enctype="multipart/form-data">
         @csrf
         <div class="nk-content-body">
             <div class="nk-content-wrap">
@@ -38,7 +38,15 @@
                         <div class="card-inner">
                             <div class="row d-flex justify-content-between">
                                 <div class="col-md-3 pb-3">
-                                    <img src="{{ $user->image() }}" alt="{{ $user->name }}">
+                                    <img src="{{ $user->image() }}" class="shadow float-md-left avatar-medium img-thumbnail mr-md-4" id="previewImg" alt=""><br>
+                                    @error('avatar')
+                                    <span id="fv-full-name-error" class="invalid">{{ $message}}</span>
+                                    @enderror
+
+                                    <div class="mt-3 mt-md-4 mt-sm-0 font-montserrat">
+                                        <input type="file" class="d-none" name="avatar" id="image_upload" onchange="previewFile(this);"/>
+                                        <a href="javascript:void(0)" class="mt-2 btn btn-outline-info btn-sm btn-brand" onclick="$('#image_upload').click()">Change Picture</a>
+                                    </div>
                                 </div>
                                 <div class="col-md-8">
                                     <div class="nk-block">
@@ -52,7 +60,7 @@
                                                     <span class="profile-ud-label">Title</span>
                                                     <span class="profile-ud-value" style="text-align: left !important;">
                                                         <div class="form-control-wrap">
-                                                            <input type="text" class="form-control form-control-lg" id="default-01"  value="{{ $user->title }}">
+                                                            <input type="text" name="title" class="form-control form-control-lg" id="default-01"  value="{{ $user->title }}">
                                                         </div>
                                                     </span>
                                                 </div>
@@ -62,7 +70,7 @@
                                                     <span class="profile-ud-label">Full Name</span>
                                                     <span class="profile-ud-value" style="text-align: left !important;">
                                                         <div class="form-control-wrap">
-                                                            <input type="text" class="form-control form-control-lg" id="default-02"  value="{{ $user->name }}">
+                                                            <input type="text" name="name" class="form-control form-control-lg" id="default-02"  value="{{ $user->name }}">
                                                         </div>
                                                     </span>
                                                 </div>
@@ -72,7 +80,7 @@
                                                     <span class="profile-ud-label">Email Address</span>
                                                     <span class="profile-ud-value" style="text-align: left !important;">
                                                         <div class="form-control-wrap">
-                                                            <input type="text" class="form-control form-control-lg" id="default-03"  value="{{ $user->email }}">
+                                                            <input type="text" class="form-control form-control-lg disabled" id="default-03"  value="{{ $user->email }}">
                                                         </div>
                                                     </span>
                                                 </div>
@@ -88,7 +96,7 @@
                                                 <div class="profile-ud wider">
                                                     <span class="profile-ud-label">Bio</span><br>
                                                     <span class="" style="text-align: left !important;">
-                                                        <textarea class="form-control form-control-sm" id="cf-default-textarea" placeholder="Write your bio" spellcheck="true">{{ $user->bio }}</textarea>
+                                                        <textarea class="form-control form-control-sm" id="cf-default-textarea" name="bio" placeholder="Write your bio" spellcheck="true">{{ $user->bio }}</textarea>
                                                     </span>
                                                 </div>
                                             </div>
@@ -97,7 +105,8 @@
                                 </div>
                             </div>
                             <div class="nk-divider divider md"></div>
-                            <button type="submit" class="btn btn-lg btn-success"><em class="icon ni ni-pen2"></em><span>Update</span> </button>
+                            <button type="submit" class="btn btn-lg btn-success" id="submitButton"
+                            onclick="event.preventDefault(); document.getElementById('form-submit').submit(); return DisplayProgressMessage(this, 'Updating...');"><em class="icon ni ni-pen2"></em><span>Update</span> </button>
 
                         </div><!-- .card-inner -->
                     </div><!-- .card -->
@@ -105,4 +114,28 @@
             </div>
         </div>
     </form>
+
+    <script>
+        function DisplayProgressMessage(ctl, msg) {
+            $(ctl).prop("disabled", true);
+            $(ctl).html("<div class='mr-3 spinner-grow spinner-grow-sm' role='status'><span class='sr-only'>Loading...</span></div>" + msg);
+            return true;
+        }
+    </script>
+
+    <script>
+        function previewFile(input){
+            var file = $("input[type=file]").get(0).files[0];
+
+            if(file){
+                var reader = new FileReader();
+
+                reader.onload = function(){
+                    $("#previewImg").attr("src", reader.result);
+                }
+
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
 @endsection

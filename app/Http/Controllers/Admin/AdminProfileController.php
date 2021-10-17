@@ -29,14 +29,25 @@ class AdminProfileController extends Controller
             'bio' => ['required', 'max:500']
         ]);
 
-        if($request->hasFile('avatar')) {
+        if ($request->hasFile('avatar')) {
             $request->validate([
-                'avatar' => ['image', 'mimes:png,jpg,jpeg', 'max:2048']
+                'avatar' => ['required', 'image', 'mimes:png,jpg,jpeg', 'max:4048'],
             ]);
 
-            $results = $this->imageUpload($request->file('avatar'));
+            if ($user->avatar) {
+                $publicId = json_decode($user->avatar)->public_id;
+
+                $this->imageDelete($publicId);
+            }
+
+            $results = $this->imageUpload(request()->file('avatar'));
 
             $attributes['avatar'] = json_encode($results);
         }
+
+        $user->update($attributes);
+
+        session()->flash('success', 'Updated Successfully');
+        return redirect()->route('adminProfileEdit', $user);
     }
 }
