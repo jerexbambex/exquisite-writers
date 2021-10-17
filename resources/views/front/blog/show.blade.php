@@ -90,11 +90,10 @@
                             <div class="author-profile-header"></div>
                             <div class="author-profile">
                                 <div class="author-profile-title">
-                                    <img src="/assets/front/images/blog/user.png" class="shadow-sm" alt="image">
-                                    <h4>Jason T. Williams</h4>
-                                    <span class="d-block">Photographer, Author, Writer</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus eleifend
-                                        tortor, vel molestie orci feugiat sit amet. </p>
+                                    <img src="{{ $blog->user->image() }}" class="shadow-sm" alt="image">
+                                    <h4>{{ $blog->user->name }}</h4>
+                                    <span class="d-block">{{ $blog->user->title }}</span>
+                                    <p>{{ $blog->user->bio }}</p>
                                 </div>
                             </div>
                         </div>

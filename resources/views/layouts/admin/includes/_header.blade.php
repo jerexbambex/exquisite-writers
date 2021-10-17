@@ -33,11 +33,12 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <div class="user-toggle">
                                 <div class="user-avatar sm">
-                                    <em class="icon ni ni-user-alt"></em>
+                                    {{-- <em class="icon ni ni-user-alt"></em> --}}
+                                    <img src="{{ Auth::user()->image() }}" alt="AV">
                                 </div>
                                 <div class="user-info d-none d-md-block">
                                     <div class="user-status">Administrator</div>
-                                    <div class="user-name dropdown-indicator">Abu Bin Ishityak</div>
+                                    <div class="user-name dropdown-indicator">{{ Auth::user()->name }}</div>
                                 </div>
                             </div>
                         </a>
@@ -45,23 +46,20 @@
                             <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
                                 <div class="user-card">
                                     <div class="user-avatar">
-                                        <span>AB</span>
+                                        <span><img src="{{ Auth::user()->image() }}"></span>
                                     </div>
                                     <div class="user-info">
-                                        <span class="lead-text">Abu Bin Ishtiyak</span>
-                                        <span class="sub-text">info@softnio.com</span>
+                                        <span class="lead-text">{{ Auth::user()->name }}</span>
+                                        <span class="sub-text">{{ Auth::user()->email }}</span>
                                     </div>
                                 </div>
                             </div>
                             <div class="dropdown-inner">
                                 <ul class="link-list">
-                                    <li><a href="html/user-profile-regular.html"><em
+                                    <li><a href="{{ route('adminProfile', Auth::id()) }}"><em
                                                 class="icon ni ni-user-alt"></em><span>View Profile</span></a></li>
-                                    <li><a href="html/user-profile-setting.html"><em
+                                    <li><a href="{{ route('adminProfile', Auth::id()) }}"><em
                                                 class="icon ni ni-setting-alt"></em><span>Account Setting</span></a>
-                                    </li>
-                                    <li><a href="html/user-profile-activity.html"><em
-                                                class="icon ni ni-activity-alt"></em><span>Login Activity</span></a>
                                     </li>
                                     <li>
                                         <form method="POST" action="{{ route('mode', Auth::user()->id) }}"
@@ -86,7 +84,7 @@
                             </div>
                         </div>
                     </li><!-- .dropdown -->
-                    <li class="dropdown notification-dropdown mr-n1">
+                    {{-- <li class="dropdown notification-dropdown mr-n1">
                         <a href="#" class="dropdown-toggle nk-quick-nav-icon" data-toggle="dropdown">
                             <div class="icon-status icon-status-info"><em class="icon ni ni-bell"></em></div>
                         </a>
@@ -163,7 +161,7 @@
                                 <a href="#">View All</a>
                             </div>
                         </div>
-                    </li><!-- .dropdown -->
+                    </li><!-- .dropdown --> --}}
                 </ul><!-- .nk-quick-nav -->
             </div><!-- .nk-header-tools -->
         </div><!-- .nk-header-wrap -->

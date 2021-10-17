@@ -15,6 +15,18 @@ class User extends Authenticatable
 
     protected $guarded = [];
 
+    public function image()
+    {
+        if ($this->avatar == null) {
+            return 'https://res.cloudinary.com/biochar-initiative-of-nigeria/image/upload/v1634449963/Exquisite/133-1332476_crowd-of-users-transparent-user-icon-png-clipart.jpg';
+        }
+        return json_decode($this->avatar)->secure_url;
+    }
+
+    public function blogs()
+    {
+        return $this->hasMany(Blog::class);
+    }
 
     protected $hidden = [
         'password',

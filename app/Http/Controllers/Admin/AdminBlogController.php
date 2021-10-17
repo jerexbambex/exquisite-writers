@@ -52,6 +52,9 @@ class AdminBlogController extends Controller
 
         $blog->categories()->attach($request->categories);
 
+        $blog->user_id = $request->user()->id;
+        $blog->update();
+
         session()->flash('success', 'You have successfully added a new post.');
         return back();
     }

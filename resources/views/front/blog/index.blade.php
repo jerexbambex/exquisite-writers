@@ -81,8 +81,8 @@
                                 <ul class="post-meta d-flex justify-content-between align-items-center">
                                     <li>
                                         <div class="post-author d-flex align-items-center">
-                                            <img src="/assets/front/images/blog/author.png" class="rounded-circle" alt="image">
-                                            <span>Travis K. Thorne</span>
+                                            <img src="{{ $blog->user->image() }}" class="rounded-circle" alt="image">
+                                            <span>{{ $blog->user->name }}</span>
                                         </div>
                                     </li>
                                     <li>

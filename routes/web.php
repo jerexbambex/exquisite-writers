@@ -9,12 +9,25 @@ use App\Http\Controllers\Admin\AdminBlogController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminAboutController;
 use App\Http\Controllers\Admin\AdminTermsController;
+use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminCategoryController;
 
 
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/test', function () {
+    $blogs = App\Models\Blog::all();
+
+    foreach($blogs as $blog) {
+        $user = App\Models\User::where('id', 1)->first();
+        $blog->user_id = $user->id;
+        $blog->update();
+    }
+
+    return "All done Master!";
 });
 
 /**
@@ -36,6 +49,8 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
+
+// Admin Panel
 Route::prefix('/admin')->middleware(['auth'])->group(function () {
     Route::get('/', [AdminHomeController::class, 'index'])->name('adminIndex');
 
@@ -66,4 +81,8 @@ Route::prefix('/admin')->middleware(['auth'])->group(function () {
     Route::get('/categories', [AdminCategoryController::class, 'index'])->name('adminCategoryIndex');
     Route::post('/categories', [AdminCategoryController::class, 'store'])->name('adminCategoryStore');
     Route::patch('/categories/{category}', [AdminCategoryController::class, 'update'])->name('adminCategoryUpdate');
+
+    Route::get('/profile/{user}', [AdminProfileController::class, 'index'])->name('adminProfile');
+    Route::get('/profile/edit/{user}', [AdminProfileController::class, 'edit'])->name('adminProfileEdit');
+    Route::post('/profile/edit/{user}', [AdminProfileController::class, 'update'])->name('adminProfileUpdate');
 });
