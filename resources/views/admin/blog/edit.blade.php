@@ -84,7 +84,7 @@
                             </div>
 
                             <div class="mt-3 col-md-12">
-                                <img src="{{ $blog->image() }}" class="shadow float-md-left avatar-medium img-thumbnail mr-md-4" id="previewImg" alt=""><br>
+                                <img src="{{ $blog->avatar }}" class="shadow float-md-left avatar-medium img-thumbnail mr-md-4" id="previewImg" alt=""><br>
                                 @error('avatar')
                                 <span id="fv-full-name-error" class="invalid">{{ $message}}</span>
                                 @enderror

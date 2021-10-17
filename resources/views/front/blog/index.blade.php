@@ -74,14 +74,14 @@
                         <div class="single-blog-post">
                             <div class="post-image">
                                 <a href="{{ route('blogShow', $blog->path()) }}">
-                                    <img src="{{ $blog->image() }}" alt="image">
+                                    <img src="{{ $blog->avatar }}" alt="image">
                                 </a>
                             </div>
                             <div class="post-content">
                                 <ul class="post-meta d-flex justify-content-between align-items-center">
                                     <li>
                                         <div class="post-author d-flex align-items-center">
-                                            <img src="{{ $blog->user->image() }}" class="rounded-circle" alt="image">
+                                            <img src="{{ $blog->user->avatar }}" class="rounded-circle" alt="image">
                                             <span>{{ $blog->user->name }}</span>
                                         </div>
                                     </li>

@@ -38,7 +38,7 @@
                         <div class="card-inner">
                             <div class="row d-flex justify-content-between">
                                 <div class="col-md-3 pb-3">
-                                    <img src="{{ $user->image() }}" class="shadow float-md-left avatar-medium img-thumbnail mr-md-4" id="previewImg" alt=""><br>
+                                    <img src="{{ $user->avatar }}" class="shadow float-md-left avatar-medium img-thumbnail mr-md-4" id="previewImg" alt=""><br>
                                     @error('avatar')
                                     <span id="fv-full-name-error" class="invalid">{{ $message}}</span>
                                     @enderror

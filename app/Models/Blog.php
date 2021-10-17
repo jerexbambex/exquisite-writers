@@ -28,6 +28,15 @@ class Blog extends Model
         return $this->id. "-" .$this->slug;
     }
 
+    public function getAvatarAttribute($value)
+    {
+        if ($value === null) {
+            return "https://res.cloudinary.com/biochar-initiative-of-nigeria/image/upload/v1633699666/Exquisite/how-to-write-a-good-blog-post.png";
+        }
+
+        return json_decode($value)->secure_url;
+    }
+
     public function image()
     {
         if ($this->avatar === null) {
