@@ -40,7 +40,7 @@
                 <div class="col-lg-8 col-md-12">
                     <div class="blog-details-desc">
                         <div class="article-image">
-                            <img src="{{ $blog->avatar() }}" alt="image">
+                            <img src="{{ $blog->avatar }}" alt="image">
                         </div>
 
                         <div class="article-content">
@@ -90,7 +90,7 @@
                             <div class="author-profile-header"></div>
                             <div class="author-profile">
                                 <div class="author-profile-title">
-                                    <img src="{{ $blog->user->image() }}" class="shadow-sm" alt="image">
+                                    <img src="{{ $blog->user->avatar }}" class="shadow-sm" alt="image">
                                     <h4>{{ $blog->user->name }}</h4>
                                     <span class="d-block">{{ $blog->user->title }}</span>
                                     <p>{{ $blog->user->bio }}</p>
@@ -104,7 +104,7 @@
                                     @if($previous !== null)
                                     <a href="{{ route('blogShow', $previous->path()) }}">
                                         <span class="image-prev">
-                                            <img src="{{ $previous->avatar() }}" class="img-fluid" alt="image">
+                                            <img src="{{ $previous->avatar }}" class="img-fluid" alt="image">
                                             <span class="post-nav-title">Prev</span>
                                         </span>
 
@@ -131,7 +131,7 @@
                                             </span>
 
                                             <span class="image-next">
-                                                <img src="{{ $next->avatar() }}" class="img-fluid" alt="image">
+                                                <img src="{{ $next->avatar }}" class="img-fluid" alt="image">
                                                 <span class="post-nav-title">Next</span>
                                             </span>
                                         </a>
