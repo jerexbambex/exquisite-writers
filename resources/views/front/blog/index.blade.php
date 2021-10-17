@@ -74,7 +74,7 @@
                         <div class="single-blog-post">
                             <div class="post-image">
                                 <a href="{{ route('blogShow', $blog->path()) }}">
-                                    <img src="{{ $blog->avatar() }}" alt="image">
+                                    <img src="{{ $blog->image() }}" alt="image">
                                 </a>
                             </div>
                             <div class="post-content">

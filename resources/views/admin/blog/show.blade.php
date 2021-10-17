@@ -43,7 +43,7 @@
                 <div class="card-inner card-inner-xl mx-auto md:w-60" style="max-width: 980px;">
                     <article class="entry mb-5 text-left">
                         <h2 class="font-circular-regular mb-5">{{ $blog->title }}</h2>
-                        <p class="mb-5"><img src="{{ $blog->avatar() }}" alt=""></p>
+                        <p class="mb-5"><img src="{{ $blog->image() }}" alt=""></p>
                         <div class="fs-20px font-weight-light">
                             {!! nl2br($blog->body) !!}
                         </div>
