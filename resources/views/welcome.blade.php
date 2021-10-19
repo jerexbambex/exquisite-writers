@@ -13,7 +13,7 @@
                     <div class="hero-1-content wow fadeInLeft animated">
                         <h1 class="title wow fadeInUp animated" data-wow-delay="0.4s">When you need content written, hire an Exquisite Writer</h1>
                         <p class=" wow fadeInUp animated" data-wow-delay="0.6s">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Our all-inclusive service provides excellent quality articles and blogs for your online presence at an affordable price!
                         </p>
                         <div class="hero-1-button-group">
                             <a href="#" class="btn theme-btn wow fadeInUp animated" data-wow-delay="0.8s"> Get Started
@@ -38,7 +38,7 @@
     <!-- /Hero -->
 
     <!-- Client Logo -->
-    <div class="client-logo-area pt-100 pb-100">
+    {{-- <div class="client-logo-area pt-100 pb-100">
         <!-- Container -->
         <div class="container">
             <!-- row -->
@@ -101,7 +101,7 @@
             <!-- row -->
         </div>
         <!-- /Container -->
-    </div>
+    </div> --}}
     <!-- /Client Logo -->
 
     <!-- About -->
@@ -125,19 +125,16 @@
                         <div class="text-center col-lg-12">
                             <div class="section-heading wow fadeInUp animated">
                                 <h5 class="section-meta ">About Us</h5>
-                                <h2 class="section-title">We Are Here For Marketing Agency, Make a Product
+                                <h2 class="section-title">We are a full-circle content creation solution
                                 </h2>
 
                             </div>
                         </div>
                         <h4>
-
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis tempus eleifend tortor, vel
-                            molestie orci feugiat sit amet. Donec posuere rhoncus tempus.
-                            Pellentesque vitae tincidunt est. Aliquam non aliquet nisi, ac sagittis nibh. In at eleifend
-                            tellus, eget tempor diam.</h4>
+                            You are the idea person, but you need execution? That's where Exquisite Writers come in. We're a unique creative team that goes above and beyond for your content needs!
+                        </h4>
                         <div class="text-center pt-30">
-                            <a href="#" class="btn theme-btn">Read More</a>
+                            <a href="{{ route('aboutUs') }}" class="btn theme-btn">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -160,7 +157,7 @@
                     <div class="text-center section-heading wow fadeInUp animated">
                         <h5 class="section-meta ">Services</h5>
                         <h2 class="section-title">
-                            We provide great services for<br> our customers based on needs
+                            We promise to provide value for <br>readers through our contents
                         </h2>
                     </div>
                 </div>
@@ -239,8 +236,10 @@
                 <div class="col-lg-6">
                     <div class="text">
                         <div class="number"><i class="ri-line-chart-line"></i></div>
-                        <h2 class="title">Built, Launch, Execel And Grow.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h2 class="title">Expert Writers.</h2>
+                        <p>
+                            We don't just want to give you content; we want the best of what's out there and handpick our team. Our writers are professionals with many articles published in various industries such as tech or finance that will add value for your business!
+                        </p>
                     </div>
                 </div>
                 <!-- /col -->
@@ -258,8 +257,10 @@
                 <div class="col-lg-6 order-lg-last">
                     <div class="text">
                         <div class="number"><i class="ri-user-line"></i></div>
-                        <h2 class="title">Customer Retention Management.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h2 class="title">Quick Turnarounds</h2>
+                        <p>
+                            We are the perfect business solution for those who need content immediately and on their schedule. No more waiting around with un-committed partners; order as much or little you want from us, and we will make sure it happens!
+                        </p>
                     </div>
                 </div>
                 <!-- /col -->
@@ -277,14 +278,36 @@
                 <div class="col-lg-6">
                     <div class="text">
                         <div class="number"><i class="ri-database-2-line"></i></div>
-                        <h2 class="title">Create a Data Secured System.</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h2 class="title">Strategic Content.</h2>
+                        <p>
+                            Our content strategists and SEO writers know how to position your company for success. We'll create a strategic plan that's tailored just for you so that we can get the most bang-for-your-buck!
+                        </p>
                     </div>
                 </div>
                 <!-- /col -->
                 <!-- col -->
                 <div class="col-lg-6 img-box wow fadeInUp animated" data-wow-delay="0.1s">
                     <div><img src="/assets/front/images/feature/3.png" class="img-fluid" alt=""></div>
+                </div>
+                <!-- /col -->
+            </div>
+            <!-- /row -->
+            <!-- row -->
+            <div class="row single-block">
+                <!-- col -->
+                <div class="col-lg-6 order-lg-last">
+                    <div class="text">
+                        <div class="number"><i class="ri-user-line"></i></div>
+                        <h2 class="title">Great Content at Scale</h2>
+                        <p>
+                            Get the content you need, when, and where. With a single source for all of your needs: articles written by professional writers who have decades of expertise in writing every type across different categories.
+                        </p>
+                    </div>
+                </div>
+                <!-- /col -->
+                <!-- col -->
+                <div class="col-lg-6 order-lg-first img-box wow fadeInUp animated" data-wow-delay="0.1s">
+                    <div><img src="/assets/front/images/feature/5.png" class="img-fluid" alt=""></div>
                 </div>
                 <!-- /col -->
             </div>
