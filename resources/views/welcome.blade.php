@@ -174,11 +174,10 @@
                             <img src="/assets/front/images/icon-img/rocket.png" alt="">
                         </div>
                         <div class="p-0 card-body content">
-                            <h5 class="mb-3"><a href="#" class="title text-dark">Project management</a></h5>
-                            <p class="mb-3 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                                tempus eleifend tortor, vel molestie orci feugiat sit amet.ver and storage
-                                solutions of unmatched quality.</p>
-                            <a href="#" class="theme-color">Read More <i class="ri-arrow-right-s-line"></i></a>
+                            <h5 class="mb-3"><a href="#" class="title text-dark">Define</a></h5>
+                            <p class="mb-3 text-muted">
+                                We provide a breakdown of the requirements.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -191,11 +190,10 @@
                             <img src="/assets/front/images/icon-img/time.png" alt="">
                         </div>
                         <div class="p-0 text-center card-body content">
-                            <h5 class="mb-3"><a href="#" class="title text-dark">Time tracking</a></h5>
-                            <p class="mb-3 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                                tempus eleifend tortor, vel molestie orci feugiat sit amet.ver and storage
-                                solutions of unmatched quality.</p>
-                            <a href="#" class="theme-color">Read More <i class="ri-arrow-right-s-line"></i></a>
+                            <h5 class="mb-3"><a href="#" class="title text-dark">Develop</a></h5>
+                            <p class="mb-3 text-muted">
+                                Exquisite team starts the writing project
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -208,12 +206,11 @@
                             <img src="/assets/front/images/icon-img/phone.png" alt="">
                         </div>
                         <div class="p-0 text-center card-body content">
-                            <h5 class="mb-3"><a href="#" class="title text-dark">Beautiful mobile app</a>
+                            <h5 class="mb-3"><a href="#" class="title text-dark">Deploy</a>
                             </h5>
-                            <p class="mb-3 text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                                tempus eleifend tortor, vel molestie orci feugiat sit amet.ver and storage
-                                solutions of unmatched quality.</p>
-                            <a href="#" class="theme-color">Read More <i class="ri-arrow-right-s-line"></i></a>
+                            <p class="mb-3 text-muted">
+                                We deliver our projects timely to you.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -318,7 +315,7 @@
     <!-- /Feature -->
 
     <!-- Team -->
-    <section class="team-member-section bg-section pt-100 pb-100"
+    {{-- <section class="team-member-section bg-section pt-100 pb-100"
         style="background: url('/assets/front/images/bg/bg-section-1.png') top center;">
         <!-- Container -->
         <div class="container">
@@ -468,7 +465,7 @@
             <!-- row -->
         </div>
         <!-- container -->
-    </section>
+    </section> --}}
     <!-- /Team -->
 
     <!-- Blog -->
@@ -477,83 +474,34 @@
         <div class="container">
             <!-- row -->
             <div class="row">
-                <!-- col -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post">
-                        <div class="post-image">
-                            <a href="page-blog-single.html">
-                                <img src="/assets/front/images/blog/blog5.jpg" alt="image">
-                            </a>
-                        </div>
-                        <div class="post-content">
-                            <ul class="post-meta d-flex justify-content-between align-items-center">
-                                <li>
-                                    <div class="post-author d-flex align-items-center">
-                                        <img src="/assets/front/images/blog/author.png" class="rounded-circle" alt="image">
-                                        <span>Travis K. Thorne</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="ri-calendar-line"></i>Dec 30, 2020
-                                </li>
-                            </ul>
-                            <h3><a href="page-blog-single.html">Lorem ipsum dolor sit amet</a></h3>
+                @foreach ($blogs as $blog)
+                    <!-- col -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-blog-post">
+                            <div class="post-image">
+                                <a href="{{ route('blogShow', $blog->path()) }}">
+                                    <img src="{{ $blog->avatar }}" alt="image">
+                                </a>
+                            </div>
+                            <div class="post-content">
+                                <ul class="post-meta d-flex justify-content-between align-items-center">
+                                    <li>
+                                        <div class="post-author d-flex align-items-center">
+                                            <img src="{{ $blog->user->avatar }}" class="rounded-circle" alt="image">
+                                            <span>{{ $blog->user->name }}</span>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <i class="ri-calendar-line"></i>{{ $blog->updated_at->diffForHumans() }}
+                                    </li>
+                                </ul>
+                                <h3><a href="{{ route('blogShow', $blog->path()) }}">{{ $blog->title }}</a></h3>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- /col -->
-                <!-- col -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post">
-                        <div class="post-image">
-                            <a href="page-blog-single.html">
-                                <img src="/assets/front/images/blog/blog3.jpg" alt="image">
-                            </a>
-                        </div>
+                    <!-- /col -->
+                @endforeach
 
-                        <div class="post-content">
-                            <ul class="post-meta d-flex justify-content-between align-items-center">
-                                <li>
-                                    <div class="post-author d-flex align-items-center">
-                                        <img src="/assets/front/images/blog/author.png" class="rounded-circle" alt="image">
-                                        <span>Travis K. Thorne</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="ri-calendar-line"></i>Dec 30, 2020
-                                </li>
-                            </ul>
-                            <h3><a href="page-blog-single.html">Lorem ipsum dolor sit amet</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <!-- /col -->
-                <!-- col -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="single-blog-post">
-                        <div class="post-image">
-                            <a href="page-blog-single.html">
-                                <img src="/assets/front/images/blog/blog4.jpg" alt="image">
-                            </a>
-                        </div>
-
-                        <div class="post-content">
-                            <ul class="post-meta d-flex justify-content-between align-items-center">
-                                <li>
-                                    <div class="post-author d-flex align-items-center">
-                                        <img src="/assets/front/images/blog/author.png" class="rounded-circle" alt="image">
-                                        <span>Travis K. Thorne</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="ri-calendar-line"></i>Dec 30, 2020
-                                </li>
-                            </ul>
-                            <h3><a href="page-blog-single.html">Lorem ipsum dolor sit amet</a></h3>
-                        </div>
-                    </div>
-                </div>
-                <!-- /col -->
             </div>
             <!-- /row -->
         </div>
@@ -562,7 +510,7 @@
     <!-- /Blog -->
 
     <!-- Faq -->
-    <section class="faq-section pb-100 bg-section"
+    {{-- <section class="faq-section pb-100 bg-section"
         style="background: url('/assets/front/images/bg/bg-section.png') top center;">
         <!-- Container -->
         <div class="container">
@@ -631,7 +579,7 @@
             <!-- /row -->
         </div>
         <!-- /Container -->
-    </section>
+    </section> --}}
     <!-- Faq -->
 
 @endsection

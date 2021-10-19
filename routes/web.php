@@ -14,9 +14,7 @@ use App\Http\Controllers\Admin\AdminCategoryController;
 
 
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/test', function () {
     $blogs = App\Models\Blog::all();
