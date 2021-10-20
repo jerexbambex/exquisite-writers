@@ -15,14 +15,14 @@ class User extends Authenticatable
 
     protected $guarded = [];
 
-    public function getAvatarAttribute($value)
-    {
-        if ($value === null) {
-            return "https://res.cloudinary.com/biochar-initiative-of-nigeria/image/upload/v1634449963/Exquisite/133-1332476_crowd-of-users-transparent-user-icon-png-clipart.jpg";
-        }
+    // public function getAvatarAttribute($value)
+    // {
+    //     if ($value === null) {
+    //         return "https://res.cloudinary.com/biochar-initiative-of-nigeria/image/upload/v1634449963/Exquisite/133-1332476_crowd-of-users-transparent-user-icon-png-clipart.jpg";
+    //     }
 
-        return json_decode($value)->secure_url;
-    }
+    //     return json_decode($value)->secure_url;
+    // }
 
     public function image()
     {
