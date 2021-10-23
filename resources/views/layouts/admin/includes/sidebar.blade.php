@@ -68,19 +68,11 @@
                     <li class="nk-menu-heading">
                         <h6 class="overline-title text-primary-alt">Components</h6>
                     </li><!-- .nk-menu-heading -->
-                    <li class="nk-menu-item has-sub">
-                        <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon"><em class="icon ni ni-layers"></em></span>
-                            <span class="nk-menu-text">Ui Elements</span>
+                    <li class="nk-menu-item">
+                        <a href="{{ route('adminMessageIndex') }}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                            <span class="nk-menu-text">Messages</span>
                         </a>
-                        <ul class="nk-menu-sub">
-                            <li class="nk-menu-item">
-                                <a href="#" class="nk-menu-link"><span class="nk-menu-text">Alerts</span></a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="#" class="nk-menu-link"><span class="nk-menu-text">Accordions</span></a>
-                            </li>
-                        </ul><!-- .nk-menu-sub -->
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
                         <a href="{{ route('adminAboutIndex') }}" class="nk-menu-link">

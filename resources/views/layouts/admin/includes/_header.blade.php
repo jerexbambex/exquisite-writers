@@ -34,7 +34,7 @@
                             <div class="user-toggle">
                                 <div class="user-avatar sm">
                                     {{-- <em class="icon ni ni-user-alt"></em> --}}
-                                    <img src="{{ Auth::user()->avatar }}" alt="AV">
+                                    <img src="{{ Auth::user()->image() }}" alt="AV">
                                 </div>
                                 <div class="user-info d-none d-md-block">
                                     <div class="user-status">Administrator</div>
@@ -46,7 +46,7 @@
                             <div class="dropdown-inner user-card-wrap bg-lighter d-none d-md-block">
                                 <div class="user-card">
                                     <div class="user-avatar">
-                                        <span><img src="{{ Auth::user()->avatar }}"></span>
+                                        <span><img src="{{ Auth::user()->image() }}"></span>
                                     </div>
                                     <div class="user-info">
                                         <span class="lead-text">{{ Auth::user()->name }}</span>

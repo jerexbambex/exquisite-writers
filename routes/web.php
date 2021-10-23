@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\AdminBlogController;
 use App\Http\Controllers\Admin\AdminHomeController;
 use App\Http\Controllers\Admin\AdminAboutController;
 use App\Http\Controllers\Admin\AdminTermsController;
+use App\Http\Controllers\Admin\AdminMessageController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminCategoryController;
 
@@ -34,6 +35,7 @@ Route::get('/test', function () {
 Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
 Route::get('/aboutus', [AboutController::class, 'show'])->name('aboutUs');
 Route::get('/contactus', [ContactController::class, 'show'])->name('contactUs');
+Route::post('/contactus', [ContactController::class, 'store'])->name('postContactUs');
 
 // Blogs
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogIndex');
@@ -83,4 +85,7 @@ Route::prefix('/admin')->middleware(['auth'])->group(function () {
     Route::get('/profile/{user}', [AdminProfileController::class, 'index'])->name('adminProfile');
     Route::get('/profile/edit/{user}', [AdminProfileController::class, 'edit'])->name('adminProfileEdit');
     Route::post('/profile/edit/{user}', [AdminProfileController::class, 'update'])->name('adminProfileUpdate');
+
+    Route::get('/messages', [AdminMessageController::class, 'index'])->name('adminMessageIndex');
+    Route::get('/messages/{message}', [AdminMessageController::class, 'show'])->name('adminMessageShow');
 });

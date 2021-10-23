@@ -96,7 +96,7 @@ class AdminBlogController extends Controller
         }
 
         $blog->update($attributes);
-        $blog->categories()->sync($request->categories);
+        $blog->categories()->syncWithoutDetaching($request->categories);
 
         session()->flash('success', 'Updated Successfully');
         return redirect()->route('adminBlogShow', $blog);
