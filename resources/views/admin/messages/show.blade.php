@@ -11,7 +11,7 @@
                             <div class="nk-ibx-head">
                                 <div class="nk-ibx-head-actions">
                                     <ul class="nk-ibx-head-tools g-1">
-                                        <li class="ml-n2"><a href="#" class="btn btn-icon btn-trigger nk-ibx-hide"><em class="icon ni ni-arrow-left"></em></a></li>
+                                        <li class="ml-n2"><a href="{{ route('adminMessageIndex') }}" class="btn btn-icon btn-trigger nk-ibx-hide"><em class="icon ni ni-arrow-left"></em></a></li>
                                         <li><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="" data-original-title="Delete"><em class="icon ni ni-trash"></em></a></li>
                                         <li>
                                             <div class="dropdown">
