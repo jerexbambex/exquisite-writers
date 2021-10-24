@@ -61,7 +61,7 @@
                         </div>
                         <div class="nk-ibx-item-elem nk-ibx-item-fluid">
                             <div class="nk-ibx-context-group">
-                                @if ($message->status === 'new')
+                                @if ($message->status === "new")
                                     <div class="nk-ibx-context-badges"><span class="badge badge-danger">New</span>
                                     </div>
                                 @endif
