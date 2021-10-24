@@ -55,13 +55,14 @@
                                 </div>
                                 <div class="user-name">
                                     <div class="lead-text">
-                                        {{ $message->fullname() }}</div>
+                                        {{ $message->fullname() }}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="nk-ibx-item-elem nk-ibx-item-fluid">
                             <div class="nk-ibx-context-group">
-                                @if ($message->status === "new")
+                                @if ($message->status === 'new')
                                     <div class="nk-ibx-context-badges"><span class="badge badge-danger">New</span>
                                     </div>
                                 @endif
@@ -84,9 +85,13 @@
                             <div class="ibx-actions">
                                 <ul class="ibx-actions-hidden gx-1">
                                     <li>
-                                        <a href="#" class="btn btn-sm btn-icon btn-trigger" data-toggle="tooltip"
-                                            data-placement="top" title="" data-original-title="Delete"><em
-                                                class="icon ni ni-trash"></em></a>
+                                        <form method="post" action="{{ route('adminMessageDelete', $message->id) }}">
+                                            @method('delete')
+                                            @csrf
+                                            <button href="#" class="btn btn-sm btn-icon btn-trigger" data-toggle="tooltip"
+                                                data-placement="top" title="" data-original-title="Delete"><em
+                                                    class="icon ni ni-trash"></em></button>
+                                        </form>
                                     </li>
                                 </ul>
                                 <ul class="ibx-actions-visible gx-2">
@@ -100,8 +105,14 @@
                                                             href="{{ route('adminMessageShow', $message->id) }}"><em
                                                                 class="icon ni ni-eye"></em><span>View</span></a>
                                                     </li>
-                                                    <li><a class="dropdown-item" href="#"><em
-                                                                class="icon ni ni-trash"></em><span>Delete</span></a>
+                                                    <li>
+                                                        <form method="post"
+                                                            action="{{ route('adminMessageDelete', $message->id) }}">
+                                                            @method('DELETE')
+                                                            @csrf
+                                                            <button class="dropdown-item text-danger" href="#"><em
+                                                                    class="icon ni ni-trash"></em><span>Delete</span></button>
+                                                        </form>
                                                     </li>
                                                 </ul>
                                             </div>

@@ -12,14 +12,32 @@
                                 <div class="nk-ibx-head-actions">
                                     <ul class="nk-ibx-head-tools g-1">
                                         <li class="ml-n2"><a href="{{ route('adminMessageIndex') }}" class="btn btn-icon btn-trigger nk-ibx-hide"><em class="icon ni ni-arrow-left"></em></a></li>
-                                        <li><a href="#" class="btn btn-icon btn-trigger btn-tooltip" title="" data-original-title="Delete"><em class="icon ni ni-trash"></em></a></li>
+                                        <li>
+                                            <form method="post" action="{{ route('adminMessageDelete', $message->id) }}">
+                                                @method('DELETE')
+                                                @csrf
+                                                <button href="#" class="btn btn-icon btn-trigger btn-tooltip" title="" data-original-title="Delete"><em class="icon ni ni-trash"></em></button>
+                                            </form>
+                                        </li>
                                         <li>
                                             <div class="dropdown">
                                                 <a href="#" class="dropdown-toggle btn btn-icon btn-trigger" data-toggle="dropdown"><em class="icon ni ni-more-v"></em></a>
                                                 <div class="dropdown-menu">
                                                     <ul class="link-list-opt no-bdr">
-                                                        <li><a class="dropdown-item" href="#"><span>Mark as unread</span></a></li>
-                                                        <li><a class="dropdown-item" href="#"><span>Delete this message</span></a></li>
+                                                        <li>
+                                                            <form method="post" action="{{ route('adminMessageUpdate', $message->id) }}">
+                                                                @method('PATCH')
+                                                                @csrf
+                                                                <button class="dropdown-item" href="#"><span>Mark as unread</span></button>
+                                                            </form>
+                                                        </li>
+                                                        <li>
+                                                            <form method="post" action="{{ route('adminMessageDelete', $message->id) }}">
+                                                                @method('DELETE')
+                                                                @csrf
+                                                                <button class="dropdown-item text-danger" href="#"><span>Delete this message</span></button>
+                                                            </form>
+                                                        </li>
                                                     </ul>
                                                 </div>
                                             </div>

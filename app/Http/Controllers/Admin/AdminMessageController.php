@@ -22,4 +22,24 @@ class AdminMessageController extends Controller
 
         return view('admin.messages.show', compact('message'));
     }
+
+    public function update(Request $request, Contact $message)
+    {
+        $message->status = "new";
+        $message->update();
+
+        session()->flash('success', 'Updated Successfully');
+
+        return redirect()->route('adminMessageIndex');
+    }
+
+    public function destroy(Contact $message)
+    {
+        $message->delete();
+
+        session()->flash('success', 'Updated Successfully');
+
+        return redirect()->route('adminMessageIndex');
+    }
+
 }

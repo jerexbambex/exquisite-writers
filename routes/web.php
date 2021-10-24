@@ -88,4 +88,6 @@ Route::prefix('/admin')->middleware(['auth'])->group(function () {
 
     Route::get('/messages', [AdminMessageController::class, 'index'])->name('adminMessageIndex');
     Route::get('/messages/{message}', [AdminMessageController::class, 'show'])->name('adminMessageShow');
+    Route::patch('/messages/{message}', [AdminMessageController::class, 'update'])->name('adminMessageUpdate');
+    Route::delete('/messages/{message}', [AdminMessageController::class, 'destroy'])->name('adminMessageDelete');
 });
