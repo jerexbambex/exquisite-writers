@@ -469,7 +469,7 @@
     <!-- /Team -->
 
     <!-- Blog -->
-    <div class="blog-area pt-100">
+    {{-- <div class="blog-area pt-100">
         <!-- Container-->
         <div class="container">
             <!-- row -->
@@ -506,7 +506,7 @@
             <!-- /row -->
         </div>
         <!-- /Container-->
-    </div>
+    </div> --}}
     <!-- /Blog -->
 
     <!-- Faq -->
