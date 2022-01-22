@@ -5,13 +5,13 @@
             <!-- Logo -->
             <div>
                 <a class="logo" href="/">
-                    <img src="/assets/front/images/logo-dark.png" class="l-dark" height="20" alt="">
-                    <img src="/assets/front/images/logo.png" class="l-light" height="40" alt="">
+                    <img src="/assets/front/images/exquisite-logo.png" class="l-dark" height="20" alt="">
+                    <img src="/assets/front/images/exquisite-logo.png" class="l-light" height="40" alt="">
                 </a>
             </div>
             <!-- /Btn -->
             <div class="buy-button">
-                <a href="#" target="_blank" class="btn theme-btn btn-display-none">Get Strated
+                <a href="{{ route('contactUs') }}" target="_blank" class="btn theme-btn btn-display-none">Get Strated
                 </a>
             </div>
             <!--/Btn -->

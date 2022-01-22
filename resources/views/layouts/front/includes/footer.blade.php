@@ -42,10 +42,10 @@
             <div class="col-md-4 col-12 foot-divider col-center"></div>
             <!-- /col -->
             <ul class="social-link">
-                <li><a href="#"><i class="ri-facebook-fill"></i></a></li>
-                <li><a href="#"><i class="ri-instagram-line"></i></a></li>
-                <li><a href="#"><i class="ri-twitter-line"></i></a></li>
-                <li><a href="#"><i class="ri-youtube-line"></i></a></li>
+                <li><a href="https://web.facebook.com/exquisitewriter" target="_blank"><i class="ri-facebook-fill"></i></a></li>
+                {{-- <li><a href="#"><i class="ri-instagram-line"></i></a></li> --}}
+                <li><a href="https://twitter.com/exquisitewrite" target="_blank"><i class="ri-twitter-line"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/exquisitewriter/" target="_blank"><i class="ri-linkedin-line"></i></a></li>
             </ul>
             <p class="copyright-text ">&copy; {{ date('Y') }} Exquisite Writers all right reserved designed by <a href="https://furseeinc.com"> FurseeInc. </a>
             </p>
