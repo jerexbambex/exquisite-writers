@@ -12,8 +12,7 @@ use App\Http\Controllers\Admin\AdminTermsController;
 use App\Http\Controllers\Admin\AdminMessageController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminCategoryController;
-
-
+use App\Http\Controllers\Front\NewsletterController;
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -36,6 +35,7 @@ Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
 Route::get('/aboutus', [AboutController::class, 'show'])->name('aboutUs');
 Route::get('/contactus', [ContactController::class, 'show'])->name('contactUs');
 Route::post('/contactus', [ContactController::class, 'store'])->name('postContactUs');
+Route::post('/subscribe', [NewsletterController::class, 'store'])->name('newsletterSubscribe');
 
 // Blogs
 Route::get('/blogs', [BlogController::class, 'index'])->name('blogIndex');

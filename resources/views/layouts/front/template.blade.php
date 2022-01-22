@@ -25,6 +25,8 @@
 
     @include('layouts.front.partials._scripts')
 
+    @include('sweetalert::alert')
+
 </body>
 
 </html>

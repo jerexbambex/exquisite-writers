@@ -7,8 +7,9 @@
                 <!-- col -->
                 <div class="col-md-8 col-12 col-center">
                     <div class="newsletter bg-theme-color">
-                        <form action="#" method="POST">
-                            <input type="email" class="news-email"
+                        <form action="{{ route('newsletterSubscribe') }}" method="POST">
+                            @csrf
+                            <input type="email" class="news-email" name="email"
                                 placeholder="Subscribe Newsletter (Enter Email Address)" />
                             <button type="submit" class="news-btn">Subscribe</button>
                         </form>
