@@ -85,8 +85,9 @@
                                 <i class="ri-phone-line"></i>
                             </div>
                             <h3>Contact</h3>
-                            <p>Mobile: <a href="tel:+44457895789">(+44) - 45789 - 5789</a></p>
-                            <p>E-mail: <a href="mailto:hello@aloa.com">hello@exquisitewritingservice.com</a></p>
+                            <p>Mobile: <a href="tel:+2348027540009">(+234) - 802 - 754 - 0009</a></p>
+                            <p>E-mail: <a href="mailto:teamlead@exquisitewritingservice.com">teamlead[at]exquisitewritingservice[dot]com</a></p>
+                            <p><a href="mailto:va@exquisitewritingservice.com">va[at]exquisitewritingservice[dot]com</a></p>
                         </div>
                     </div>
 
@@ -99,7 +100,7 @@
                                 <i class="ri-time-line"></i>
                             </div>
                             <h3>Hours of Operation</h3>
-                            <p>Monday - Friday: 09:00 - 20:00</p>
+                            <p>Monday - Sunday: 09:00 - 17:00</p>
                             {{-- <p>Sunday & Saturday: 10:30 - 22:00</p> --}}
                         </div>
                     </div>

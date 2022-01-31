@@ -44,11 +44,11 @@
             <!-- /col -->
             <ul class="social-link">
                 <li><a href="https://web.facebook.com/exquisitewriter" target="_blank"><i class="ri-facebook-fill"></i></a></li>
-                {{-- <li><a href="#"><i class="ri-instagram-line"></i></a></li> --}}
+                <li><a href="https://instagram.com/exquisitewriter1?utm_medium=copy_link"><i class="ri-instagram-line"></i></a></li>
                 <li><a href="https://twitter.com/exquisitewrite" target="_blank"><i class="ri-twitter-line"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/exquisitewriter/" target="_blank"><i class="ri-linkedin-line"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/exquisite-writing-services" target="_blank"><i class="ri-linkedin-line"></i></a></li>
             </ul>
-            <p class="copyright-text ">&copy; {{ date('Y') }} Exquisite Writers all right reserved designed by <a href="https://furseeinc.com"> FurseeInc. </a>
+            <p class="copyright-text ">&copy; {{ date('Y') }} Exquisite Writers all right reserved. Designed by <a href="https://furseeinc.com"> FurseeInc. </a>
             </p>
         </div>
         <!-- /Container -->

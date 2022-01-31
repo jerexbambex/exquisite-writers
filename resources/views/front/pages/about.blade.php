@@ -62,10 +62,10 @@
                     <!-- col -->
                     <div class="col-lg-12">
                         <div class="section-heading text-center wow fadeInUp animated">
-                            <h5 class="section-meta ">Partner</h5>
-                            <h2 class="section-title">Trusted by the world's best</h2>
+                            <h5 class="section-meta ">Testimonials</h5>
+                            <h2 class="section-title">What our clients are saying about us</h2>
                             <p class="section-sub">Lorem ipsum dolor sit amet</p>
-    
+
                         </div>
                     </div>
                     <!-- col -->
