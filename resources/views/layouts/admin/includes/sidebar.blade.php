@@ -29,7 +29,7 @@
                         <h6 class="overline-title text-primary-alt">Pre-Built Pages</h6>
                     </li><!-- .nk-menu-heading -->
                     <li class="nk-menu-item">
-                        <a href="" class="nk-menu-link">
+                        <a href="#" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
                             <span class="nk-menu-text">Teams</span>
                         </a>
