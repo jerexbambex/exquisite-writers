@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\AdminTermsController;
 use App\Http\Controllers\Admin\AdminMessageController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminCategoryController;
+use App\Http\Controllers\Admin\AdminSubscriberController;
 use App\Http\Controllers\Front\NewsletterController;
 
 Route::get('/', [HomeController::class, 'index']);
@@ -90,4 +91,6 @@ Route::prefix('/admin')->middleware(['auth'])->group(function () {
     Route::get('/messages/{message}', [AdminMessageController::class, 'show'])->name('adminMessageShow');
     Route::patch('/messages/{message}', [AdminMessageController::class, 'update'])->name('adminMessageUpdate');
     Route::delete('/messages/{message}', [AdminMessageController::class, 'destroy'])->name('adminMessageDelete');
+
+    Route::get('/subscribers', [AdminSubscriberController::class, 'index'])->name('adminSubscriberIndex');
 });

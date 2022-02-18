@@ -1,7 +1,7 @@
 @extends('layouts.admintemplate')
 
 @section('content')
-    <script src="https://cdn.tiny.cloud/1/skfrbrhb18mdqaudmp4i5ubffljrxf9x77bndty9vvw0unjl/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <!-- <script src="https://cdn.tiny.cloud/1/skfrbrhb18mdqaudmp4i5ubffljrxf9x77bndty9vvw0unjl/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script> -->
     <div class="nk-block-head nk-block-head-sm">
         <div class="nk-block-between">
             <div class="nk-block-head-content">

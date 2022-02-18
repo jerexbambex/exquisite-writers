@@ -233,7 +233,7 @@
                 <div class="col-lg-6">
                     <div class="text">
                         <div class="number"><i class="ri-line-chart-line"></i></div>
-                        <h2 class="title">Expert Writers.</h2>
+                        <h2 class="title">Expert Writers</h2>
                         <p>
                             We don't just want to give you content; we want the best of what's out there and handpick our team. Our writers are professionals with many articles published in various industries such as tech or finance that will add value for your business!
                         </p>
@@ -275,7 +275,7 @@
                 <div class="col-lg-6">
                     <div class="text">
                         <div class="number"><i class="ri-database-2-line"></i></div>
-                        <h2 class="title">Strategic Content.</h2>
+                        <h2 class="title">Strategic Content\</h2>
                         <p>
                             Our content strategists and SEO writers know how to position your company for success. We'll create a strategic plan that's tailored just for you so that we can get the most bang-for-your-buck!
                         </p>

@@ -47,27 +47,14 @@
                         </a>
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-heading">
-                        <h6 class="overline-title text-primary-alt">Misc Pages</h6>
-                    </li><!-- .nk-menu-heading -->
-                    <li class="nk-menu-item has-sub">
-                        <a href="#" class="nk-menu-link nk-menu-toggle">
-                            <span class="nk-menu-icon"><em class="icon ni ni-signin"></em></span>
-                            <span class="nk-menu-text">Auth Pages</span>
-                        </a>
-                        <ul class="nk-menu-sub">
-                            <li class="nk-menu-item">
-                                <a href="#" class="nk-menu-link" target="_blank"><span class="nk-menu-text">Login /
-                                        Signin</span></a>
-                            </li>
-                            <li class="nk-menu-item">
-                                <a href="#" class="nk-menu-link" target="_blank"><span class="nk-menu-text">Register
-                                        / Signup</span></a>
-                            </li>
-                        </ul><!-- .nk-menu-sub -->
-                    </li><!-- .nk-menu-item -->
-                    <li class="nk-menu-heading">
                         <h6 class="overline-title text-primary-alt">Components</h6>
                     </li><!-- .nk-menu-heading -->
+                    <li class="nk-menu-item">
+                        <a href="{{ route('adminSubscriberIndex') }}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                            <span class="nk-menu-text">Subscribers</span>
+                        </a>
+                    </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
                         <a href="{{ route('adminMessageIndex') }}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>

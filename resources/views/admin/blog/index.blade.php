@@ -11,8 +11,7 @@
                 <div class="nk-block-des">
                     <p class="lead">You can start adding new posts by clicking the button below.</p>
                     <p class="mt-5">
-                        <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#add-member"><em
-                                class="icon ni ni-plus"></em><span>Start adding</span> </a>
+                        <a href="{{ route('adminBlogCreate') }}" class="btn btn-dark"><em class="icon ni ni-plus"></em><span>Start adding</span> </a>
                     </p>
                 </div>
             </div>
