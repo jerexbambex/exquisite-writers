@@ -275,7 +275,7 @@
                 <div class="col-lg-6">
                     <div class="text">
                         <div class="number"><i class="ri-database-2-line"></i></div>
-                        <h2 class="title">Strategic Content\</h2>
+                        <h2 class="title">Strategic Content</h2>
                         <p>
                             Our content strategists and SEO writers know how to position your company for success. We'll create a strategic plan that's tailored just for you so that we can get the most bang-for-your-buck!
                         </p>
