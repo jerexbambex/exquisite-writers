@@ -20,7 +20,7 @@
             <div class="nk-sidebar-menu" data-simplebar>
                 <ul class="nk-menu">
                     <li class="nk-menu-item">
-                        <a href="html/index.html" class="nk-menu-link">
+                        <a href="{{ route('adminIndex') }}" class="nk-menu-link">
                             <span class="nk-menu-icon"><em class="icon ni ni-dashlite"></em></span>
                             <span class="nk-menu-text">Default Dashboard</span>
                         </a>
@@ -29,20 +29,20 @@
                         <h6 class="overline-title text-primary-alt">Pre-Built Pages</h6>
                     </li><!-- .nk-menu-heading -->
                     <li class="nk-menu-item">
-                        <a href="#" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                        <a href="{{ route('adminTeamIndex') }}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-user-list"></em></span>
                             <span class="nk-menu-text">Teams</span>
                         </a>
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
                         <a href="{{ route('adminBlogIndex') }}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-article"></em></span>
                             <span class="nk-menu-text">Blog Posts</span>
                         </a>
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
                         <a href="{{ route('adminCategoryIndex') }}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-opt-dot-alt"></em></span>
                             <span class="nk-menu-text">Categories</span>
                         </a>
                     </li><!-- .nk-menu-item -->
@@ -57,19 +57,19 @@
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
                         <a href="{{ route('adminMessageIndex') }}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-mail"></em></span>
                             <span class="nk-menu-text">Messages</span>
                         </a>
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
                         <a href="{{ route('adminAboutIndex') }}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-reports-alt"></em></span>
                             <span class="nk-menu-text">About Us</span>
                         </a>
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
                         <a href="{{ route('adminTermsIndex') }}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-file-text"></em></span>
                             <span class="nk-menu-text">Privacy Policy</span>
                         </a>
                     </li><!-- .nk-menu-item -->

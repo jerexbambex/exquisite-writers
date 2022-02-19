@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\AdminMessageController;
 use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminCategoryController;
 use App\Http\Controllers\Admin\AdminSubscriberController;
+use App\Http\Controllers\Admin\AdminTeamController;
 use App\Http\Controllers\Front\NewsletterController;
 
 Route::get('/', [HomeController::class, 'index']);
@@ -93,4 +94,9 @@ Route::prefix('/admin')->middleware(['auth'])->group(function () {
     Route::delete('/messages/{message}', [AdminMessageController::class, 'destroy'])->name('adminMessageDelete');
 
     Route::get('/subscribers', [AdminSubscriberController::class, 'index'])->name('adminSubscriberIndex');
+
+    Route::get('/teams', [AdminTeamController::class, 'index'])->name('adminTeamIndex');
+    Route::post('/teams', [AdminTeamController::class, 'store'])->name('adminTeamStore');
+    Route::patch('/teams/{team}', [AdminTeamController::class, 'update'])->name('adminTeamUpdate');
+    Route::delete('/teams/{team}', [AdminTeamController::class, 'destroy'])->name('adminTeamDelete');
 });

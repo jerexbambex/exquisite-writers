@@ -53,7 +53,7 @@
     </section>
     <!-- /About -->
 
-        <!-- Client Logo -->
+        {{-- <!-- Client Logo -->
         <section class="client-logo-area">
             <!-- Container -->
             <div class="container">
@@ -158,5 +158,56 @@
                 <!-- /row -->
             </div>
         </section>
-        <!-- /Client Logo -->
+        <!-- /Client Logo --> --}}
+
+        @if (count($teams))
+            <!-- Team -->
+            <section class="team-member-section pt-50 pb-100">
+                <!-- Container -->
+                <div class="container">
+                    <!-- row -->
+                    <div class="row justify-content-center">
+                        <!-- col -->
+                        <div class="col-lg-12">
+                            <div class="section-heading text-center wow fadeInUp animated">
+                                <h5 class="section-meta ">TEAM</h5>
+                                <h2 class="section-title">Meet Our team members</h2>
+                                {{-- <p class="section-sub">Lorem ipsum dolor sit amet</p> --}}
+
+                            </div>
+                        </div>
+                        <!-- /col -->
+                    </div>
+                    <!-- row -->
+                    <div class="row">
+                        <!-- col -->
+                        @foreach ($teams as $team)
+                            <div class="col-lg-4 col-md-6 col-sm-6 mt-20">
+                                <div class="single-team-member position-relative my-lg-3 my-md-3 my-sm-0">
+                                    <div class="team-image">
+                                        <img src="{{ $team->userAvatar() }}" alt="Team Members" class="img-fluid rounded">
+                                    </div>
+                                    <div
+                                        class="team-info text-white rounded d-flex flex-column align-items-center justify-content-center">
+                                        <h5 class="mb-0">{{ $team->fullName() }}</h5>
+                                        <h6>{{ $team->role }}</h6>
+                                        {{-- <ul class="list-inline team-social my-4 text-white">
+                                            <li class="list-inline-item"><a href="#"><i class="uil uil-facebook-f"></i></a></li>
+                                            <li class="list-inline-item"><a href="#"><i class="uil uil-twitter-alt"></i></a></li>
+                                            <li class="list-inline-item"><a href="#"><i class="uil uil-github-alt"></i></a></li>
+                                            <li class="list-inline-item"><a href="#"><i class="uil uil-dribbble"></i></a></li>
+                                        </ul>
+                                        <a href="#" target="_blank" class="btn theme-btn-1">View details</a> --}}
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                        <!-- /col -->
+                    </div>
+                    <!-- row -->
+                </div>
+                <!-- container -->
+            </section>
+            <!-- /Team -->
+        @endif
 @endsection

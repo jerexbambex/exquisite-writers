@@ -1,7 +1,7 @@
 @extends('layouts.admintemplate')
 
 @section('content')
-    @if(!$teams->count())
+    @if(!$teams)
         <div class="mx-auto nk-block-head nk-block-head-lg wide-xs">
             <div class="text-center nk-block-head-content">
                 <p>
@@ -115,7 +115,7 @@
     <!-- Add new Modal -->
     <div class="modal fade" tabindex="-1" role="dialog" id="add-member">
         <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <form method="POST" action="{{ route('admin.team.store') }}" id="form-submit" enctype="multipart/form-data">
+            <form method="POST" action="{{ route('adminTeamStore') }}" id="form-submit" enctype="multipart/form-data">
                 @csrf
                 <div class="modal-content">
                     <a href="#" class="close" data-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
@@ -210,7 +210,7 @@
     @foreach($teams as $team)
         <div class="modal fade" tabindex="-1" role="dialog" id="add-member{{ $team->id }}">
             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                <form method="POST" action="{{ route('admin.team.update', $team->path()) }}" id="form-submit{{ $team->id }}" enctype="multipart/form-data">
+                <form method="POST" action="{{ route('adminTeamUpdate', $team->path()) }}" id="form-submit{{ $team->id }}" enctype="multipart/form-data">
                     @csrf
                     @method('PATCH')
                     <div class="modal-content">
@@ -318,15 +318,15 @@
                             <ul class="flex-wrap align-center g-3">
                                 <li>
                                     <button class="btn btn-danger" id="submitButton{{ $team->id }}" type="submit"
-                                        onclick="event.preventDefault(); 
-                                        document.getElementById('subscription-cancel-confirmed{{ $team->id }}').submit(); 
+                                        onclick="event.preventDefault();
+                                        document.getElementById('subscription-cancel-confirmed{{ $team->id }}').submit();
                                         return DisplayProgressMessage(this, 'Removing...');">Continue and Remove</button>
                                 </li>
                                 <li>
                                     <a href="#" class="btn btn-light" data-dismiss="modal">Never mind, don't revoke</a>
                                 </li>
                             </ul>
-                            <form method="POST" action="{{ route('admin.team.delete', $team->path()) }}" id="subscription-cancel-confirmed{{ $team->id }}">
+                            <form method="POST" action="{{ route('adminTeamDelete', $team->path()) }}" id="subscription-cancel-confirmed{{ $team->id }}">
                                 @csrf
                                 @method('DELETE')
                             </form>
@@ -334,7 +334,7 @@
                     </div>
                 </div><!-- .modal-content -->
             </div><!-- .modla-dialog -->
-        </div>        
+        </div>
     @endforeach
 
 
