@@ -29,7 +29,7 @@ class Team extends Model
     public function userAvatar(): string
     {
         if ($this->image() == null) {
-            return 'https://res.cloudinary.com/dj6bwuwu6/image/upload/v1595346948/fego-placeholder_aokgwg.jpg';
+            return '/assets/front/images/exquisite-logo.png';
         }
         return json_decode($this->avatar)->secure_url;
     }
