@@ -11,14 +11,14 @@
                 <!-- /col -->
                 <div class="col-lg-12">
                     <div class="title-heading text-center text-md-center">
-                        <h3>Blog</h3>
+                        <h3>Content Samples by Exquisite Writers</h3>
                         <p class="text-muted text-center text-md-center mt-2 mb-0">
-                            Building your authority with content is the key to any business. The Exquisite Writers' Blog provides pratical, real-world tips on how you can build an online following and increase traffic for all those who need it.
+                            Here you can browse our samples across various types and domains.
                         </p>
                         <nav aria-label="breadcrumb" class="d-inline-block mt-2">
                             <ul class="breadcrumb mb-0">
                                 <li class="breadcrumb-item"><a href="/">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Blog</li>
+                                <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
                             </ul>
                         </nav>
                     </div>

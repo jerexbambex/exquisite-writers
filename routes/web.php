@@ -40,8 +40,8 @@ Route::post('/contactus', [ContactController::class, 'store'])->name('postContac
 Route::post('/subscribe', [NewsletterController::class, 'store'])->name('newsletterSubscribe');
 
 // Blogs
-Route::get('/blogs', [BlogController::class, 'index'])->name('blogIndex');
-Route::get('/blogs/{blog}', [BlogController::class, 'show'])->name('blogShow');
+Route::get('/portfolio', [BlogController::class, 'index'])->name('blogIndex');
+Route::get('/portfolio/{blog}', [BlogController::class, 'show'])->name('blogShow');
 
 
 

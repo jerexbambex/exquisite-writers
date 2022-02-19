@@ -10,13 +10,13 @@
                 <!-- /col -->
                 <div class="col-lg-12">
                     <div class="title-heading text-center text-md-center">
-                        <h3>Blog Post</h3>
+                        <h3>Post</h3>
                         <p class="text-muted text-center text-md-center mt-2 mb-0">
                             {{ $blog->title }}
                         </p>
                         <nav aria-label="breadcrumb" class="d-inline-block mt-2">
                             <ul class="breadcrumb mb-0">
-                                <li class="breadcrumb-item"><a href="{{ route('blogIndex') }}">Blogs</a></li>
+                                <li class="breadcrumb-item"><a href="{{ route('blogIndex') }}">Portfolio</a></li>
                                 <li class="breadcrumb-item active" aria-current="page">{{ $blog->id }}</li>
                             </ul>
                         </nav>

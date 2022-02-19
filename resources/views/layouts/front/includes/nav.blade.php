@@ -45,7 +45,7 @@
                     <!-- /About us -->
                     <!-- Portfolio -->
                     <li class="">
-                        <a href="javascript:void(0)">Portfolio</a>
+                        <a href="{{ route('blogIndex') }}">Portfolio</a>
                     </li>
                     <!-- /Portfolio -->
 
