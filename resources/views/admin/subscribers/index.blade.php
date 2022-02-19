@@ -3,14 +3,26 @@
 @section('content')
     <div class="components-preview wide-md mx-auto">
         <div class="nk-block-head nk-block-head-lg wide-sm">
-            <div class="nk-block-head-content">
-                {{-- <div class="nk-block-head-sub"><a class="back-to" href="html/components.html"><em class="icon ni ni-arrow-left"></em><span>Components</span></a></div> --}}
-                @if (!count($subscribers))
-                    <h2 class="nk-block-title fw-normal">You have 0 subscriber</h2>
-                @else
-                    <h2 class="nk-block-title fw-normal">You have {{ $subscribers->count() }} {{ Str::plural( 'subscriber', $subscribers->count() )}}</h2>
-                @endif
+            <div class="nk-block-between">
+                <div class="nk-block-head-content">
+                    {{-- <div class="nk-block-head-sub"><a class="back-to" href="html/components.html"><em class="icon ni ni-arrow-left"></em><span>Components</span></a></div> --}}
+                    @if (!count($subscribers))
+                        <h2 class="nk-block-title fw-normal">You have 0 subscriber</h2>
+                    @else
+                        <h2 class="nk-block-title fw-normal">You have {{ $subscribers->count() }} {{ Str::plural( 'subscriber', $subscribers->count() )}}</h2>
+                    @endif
 
+                </div>
+                <div class="nk-block-head-content">
+                    <div class="toggle-wrap nk-block-tools-toggle">
+                        <a href="#" class="btn btn-icon btn-trigger toggle-expand mr-n1" data-target="pageMenu"><em class="icon ni ni-more-v"></em></a>
+                        <div class="toggle-expand-content" data-content="pageMenu">
+                            <ul class="nk-block-tools g-3">
+                                <li class="nk-block-tools-opt"><a href="{{ route('adminSubscriberExport') }}" class="btn btn-primary"><em class="icon ni ni-reports"></em><span>Export List</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- .nk-block-head-content -->
             </div>
         </div><!-- .nk-block-head -->
         <div class="nk-block nk-block-lg">
@@ -21,7 +33,7 @@
                     </div>
                 </div>
             </div>
-            <table class="datatable-init nowrap nk-tb-list is-separate" data-auto-responsive="false">
+            <table class="datatable-init datatable-init-export nowrap nk-tb-list is-separate table" data-auto-responsive="false" data-export-title="Export">
                 <thead>
                     <tr class="nk-tb-item nk-tb-head">
                         <th class="nk-tb-col nk-tb-col-check">

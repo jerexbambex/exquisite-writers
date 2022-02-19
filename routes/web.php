@@ -94,6 +94,7 @@ Route::prefix('/admin')->middleware(['auth'])->group(function () {
     Route::delete('/messages/{message}', [AdminMessageController::class, 'destroy'])->name('adminMessageDelete');
 
     Route::get('/subscribers', [AdminSubscriberController::class, 'index'])->name('adminSubscriberIndex');
+    Route::get('/subscribers/export/', [AdminSubscriberController::class, 'export'])->name('adminSubscriberExport');
 
     Route::get('/teams', [AdminTeamController::class, 'index'])->name('adminTeamIndex');
     Route::post('/teams', [AdminTeamController::class, 'store'])->name('adminTeamStore');
