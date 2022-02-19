@@ -36,7 +36,7 @@
                     <div class="card-inner">
                         <div class="row d-flex justify-content-between">
                             <div class="col-md-3 pb-3">
-                                <img src="{{ $user->avatar }}" alt="{{ $user->name }}">
+                                <img src="{{ $user->image() }}" alt="{{ $user->name }}">
                             </div>
                             <div class="col-md-8">
                                 <div class="nk-block">
