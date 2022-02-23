@@ -6,6 +6,7 @@ use App\Models\Team;
 use Illuminate\Http\Request;
 use App\Http\Traits\ImageUpload;
 use App\Http\Controllers\Controller;
+use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
 class AdminTeamController extends Controller
 {
@@ -25,6 +26,7 @@ class AdminTeamController extends Controller
             'last_name' => ['required', 'max:255'],
             'handle' => ['required', 'max:255'],
             'role' => ['required', 'max:255'],
+            'about' => ['required']
         ]);
 
         if ($request->hasFile('avatar')) {
@@ -49,15 +51,17 @@ class AdminTeamController extends Controller
             'last_name' => ['required', 'max:255'],
             'handle' => ['required', 'max:255'],
             'role' => ['required', 'max:255'],
+            'about' => ['required']
         ]);
 
         if (request()->hasFile('avatar')) {
             request()->validate([
                 'avatar' => ['required', 'image', 'mimes:png,jpg,jpeg', 'max:4048'],
             ]);
+
             if ($team->avatar) {
                 $publicId = json_decode($team->avatar)->public_id;
-                Cloudinary::destroy($publicId, $options = []);
+                $this->imageDelete($publicId);
             }
 
             $results = $this->imageUpload(request()->file('avatar'));
@@ -73,12 +77,14 @@ class AdminTeamController extends Controller
 
     public function destroy(Team $team)
     {
-        $publicId = json_decode($team->avatar)->public_id;
-        Cloudinary::destroy($publicId, $options = []);
+        if ($team->avatar) {
+            $publicId = json_decode($team->avatar)->public_id;
+            $this->imageDelete($publicId);
+        }
 
         $team->delete();
 
-        request()->session()->flash('success', 'You have successfully Deleted the record');
+        request()->session()->flash('success', 'You have successfully deleted the record');
         return back();
     }
 }

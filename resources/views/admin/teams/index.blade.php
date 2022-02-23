@@ -89,12 +89,13 @@
                                         </div>
                                     </div>
                                     <div class="team-details">
-                                        <p>{{ $team->role }}</p>
+                                        <p>Role: {{ $team->role }}</p>
                                     </div>
                                     <ul class="team-statistics">
                                         {{-- <li><span>213</span><span>Projects</span></li>
                                         <li><span>87.5%</span><span>Performed</span></li>
                                         <li><span>587</span><span>Tasks</span></li> --}}
+                                        {{ $team->about }}
                                     </ul>
                                     <div class="team-view">
                                         <a href="#" class="btn btn-round btn-outline-light w-150px" data-toggle="modal" data-target="#add-member{{ $team->id }}"><span>Edit Profile</span></a>
@@ -167,6 +168,18 @@
                                         </div>
                                     </div>
 
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label class="form-label" for="cf-default-textarea">About</label>
+                                            <div class="form-control-wrap">
+                                                <textarea class="form-control form-control-lg" id="cf-default-textarea" name="about" placeholder="Short description about the person"></textarea>
+                                                @error('about')
+                                                    <span id="fv-full-name-error" class="invalid">{{ $message}}</span>
+                                                @enderror
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="col-md-6">
                                         <img src="" class="shadow user-avatar xl float-md-left rounded-circle mr-md-4" id="previewImg" alt="">
                                     </div>
@@ -216,7 +229,7 @@
                     <div class="modal-content">
                         <a href="#" class="close" data-dismiss="modal"><em class="icon ni ni-cross-sm"></em></a>
                         <div class="modal-body modal-body-lg">
-                            <h5 class="title">Add New Team Member</h5>
+                            <h5 class="title">Edit {{ $team->first_name }}'s Record</h5>
                             <div class="tab-content">
                                 <div class="tab-pane active" id="personal">
                                     <div class="row gy-4">
@@ -257,6 +270,18 @@
                                                     </div>
                                                     <input type="text" class="form-control form-control-lg" id="handle" value="{{ $team->handle }}" placeholder="jerexbambex" name="handle">
                                                     @error('handle')
+                                                        <span id="fv-full-name-error" class="invalid">{{ $message}}</span>
+                                                    @enderror
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label class="form-label" for="cf-default-textarea">About</label>
+                                                <div class="form-control-wrap">
+                                                    <textarea class="form-control form-control-lg" id="cf-default-textarea" name="about" placeholder="Short description about the person">{{ $team->about }}</textarea>
+                                                    @error('about')
                                                         <span id="fv-full-name-error" class="invalid">{{ $message}}</span>
                                                     @enderror
                                                 </div>
@@ -326,7 +351,7 @@
                                     <a href="#" class="btn btn-light" data-dismiss="modal">Never mind, don't revoke</a>
                                 </li>
                             </ul>
-                            <form method="POST" action="{{ route('adminTeamDelete', $team->path()) }}" id="subscription-cancel-confirmed{{ $team->id }}">
+                            <form method="POST" action="{{ route('adminTeamDelete', $team->id) }}" id="subscription-cancel-confirmed{{ $team->id }}">
                                 @csrf
                                 @method('DELETE')
                             </form>
