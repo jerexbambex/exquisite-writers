@@ -191,7 +191,7 @@
                                         class="team-info text-white rounded d-flex flex-column align-items-center justify-content-center">
                                         <h5 class="mb-0">{{ $team->fullName() }}</h5>
                                         <h6>{{ $team->role }}</h6>
-                                        <p>{{ $team->about }}</p>
+                                        <p class="text-center">{{ $team->about }}</p>
                                         {{-- <ul class="list-inline team-social my-4 text-white">
                                             <li class="list-inline-item"><a href="#"><i class="uil uil-facebook-f"></i></a></li>
                                             <li class="list-inline-item"><a href="#"><i class="uil uil-twitter-alt"></i></a></li>
