@@ -46,6 +46,12 @@
                             <span class="nk-menu-text">Categories</span>
                         </a>
                     </li><!-- .nk-menu-item -->
+                    <li class="nk-menu-item">
+                        <a href="{{ route('adminTestimonialIndex') }}" class="nk-menu-link">
+                            <span class="nk-menu-icon"><em class="icon ni ni-reports-alt"></em></span>
+                            <span class="nk-menu-text">Testimonials</span>
+                        </a>
+                    </li><!-- .nk-menu-item -->
                     <li class="nk-menu-heading">
                         <h6 class="overline-title text-primary-alt">Components</h6>
                     </li><!-- .nk-menu-heading -->
@@ -63,7 +69,7 @@
                     </li><!-- .nk-menu-item -->
                     <li class="nk-menu-item">
                         <a href="{{ route('adminAboutIndex') }}" class="nk-menu-link">
-                            <span class="nk-menu-icon"><em class="icon ni ni-reports-alt"></em></span>
+                            <span class="nk-menu-icon"><em class="icon ni ni-info-i"></em></span>
                             <span class="nk-menu-text">About Us</span>
                         </a>
                     </li><!-- .nk-menu-item -->

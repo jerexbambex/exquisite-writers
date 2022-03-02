@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\AdminProfileController;
 use App\Http\Controllers\Admin\AdminCategoryController;
 use App\Http\Controllers\Admin\AdminSubscriberController;
 use App\Http\Controllers\Admin\AdminTeamController;
+use App\Http\Controllers\Admin\AdminTestimonialController;
 use App\Http\Controllers\Front\NewsletterController;
 
 Route::get('/', [HomeController::class, 'index']);
@@ -100,4 +101,9 @@ Route::prefix('/admin')->middleware(['auth'])->group(function () {
     Route::post('/teams', [AdminTeamController::class, 'store'])->name('adminTeamStore');
     Route::patch('/teams/{team}', [AdminTeamController::class, 'update'])->name('adminTeamUpdate');
     Route::delete('/teams/{team}', [AdminTeamController::class, 'destroy'])->name('adminTeamDelete');
+
+    Route::get('/testimonials', [AdminTestimonialController::class, 'index'])->name('adminTestimonialIndex');
+    Route::post('/testimonials', [AdminTestimonialController::class, 'store'])->name('adminTestimonialStore');
+    Route::patch('/testimonials/{testimonial}', [AdminTestimonialController::class, 'update'])->name('adminTestimonialUpdate');
+    Route::delete('/testimonials/{testimonial}', [AdminTestimonialController::class, 'destroy'])->name('adminTestimonialDelete');
 });

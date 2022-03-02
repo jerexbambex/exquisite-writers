@@ -6,6 +6,7 @@ use App\Models\Team;
 use Illuminate\Http\Request;
 use App\Http\Traits\ImageUpload;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\TeamStoreRequest;
 use CloudinaryLabs\CloudinaryLaravel\Facades\Cloudinary;
 
 class AdminTeamController extends Controller
@@ -19,21 +20,15 @@ class AdminTeamController extends Controller
         return view('admin.teams.index', compact('teams'));
     }
 
-    public function store(Request $request)
+    public function store(TeamStoreRequest $request)
     {
-        $attributes = request()->validate([
-            'first_name' => ['required', 'max:255'],
-            'last_name' => ['required', 'max:255'],
-            'handle' => ['required', 'max:255'],
-            'role' => ['required', 'max:255'],
-            'about' => ['required']
-        ]);
+        $attributes = $request->validated();
 
         if ($request->hasFile('avatar')) {
             request()->validate([
                 'avatar' => ['required', 'image', 'mimes:png,jpg,jpeg', 'max:4048'],
             ]);
-            $results = $this->imageUpload($request->file('avatar'), 455, 475);
+            $results = $this->imageUpload($request->file('avatar'), 600, 600);
 
             $attributes['avatar'] = json_encode($results);
         }
@@ -44,15 +39,9 @@ class AdminTeamController extends Controller
         return back();
     }
 
-    public function update(Team $team)
+    public function update(TeamStoreRequest $request, Team $team)
     {
-        $attributes = request()->validate([
-            'first_name' => ['required', 'max:255'],
-            'last_name' => ['required', 'max:255'],
-            'handle' => ['required', 'max:255'],
-            'role' => ['required', 'max:255'],
-            'about' => ['required']
-        ]);
+        $attributes = $request->validated();
 
         if (request()->hasFile('avatar')) {
             request()->validate([
@@ -64,7 +53,7 @@ class AdminTeamController extends Controller
                 $this->imageDelete($publicId);
             }
 
-            $results = $this->imageUpload(request()->file('avatar'));
+            $results = $this->imageUpload(request()->file('avatar'), 600, 600);
 
             $attributes['avatar'] = json_encode($results);
         }

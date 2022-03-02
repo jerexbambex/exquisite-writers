@@ -95,7 +95,7 @@
                                         {{-- <li><span>213</span><span>Projects</span></li>
                                         <li><span>87.5%</span><span>Performed</span></li>
                                         <li><span>587</span><span>Tasks</span></li> --}}
-                                        {{ $team->about }}
+                                        {{ Str::limit($team->about, 50) }}
                                     </ul>
                                     <div class="team-view">
                                         <a href="#" class="btn btn-round btn-outline-light w-150px" data-toggle="modal" data-target="#add-member{{ $team->id }}"><span>Edit Profile</span></a>
