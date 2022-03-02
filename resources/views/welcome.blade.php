@@ -314,6 +314,50 @@
     </div>
     <!-- /Feature -->
 
+    @if(count($testimonials))
+        <!-- Testimoninal -->
+        <section class="testimonial-area pt-100 pb-100" id="testimonial">
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <!-- col -->
+                    <div class="col-lg-12">
+                        <div class="section-heading text-center wow fadeInUp animated">
+                            <h5 class="section-meta ">Testimonial</h5>
+                            <h2 class="section-title">What they say about us</h2>
+                            {{-- <p class="section-sub">Lorem ipsum dolor sit amet</p> --}}
+
+                        </div>
+                    </div>
+                    <!-- col -->
+                </div>
+                <!-- /row -->
+
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-10">
+                        <div class="testi-carousel">
+                            @foreach ($testimonials as $testimonial)
+                                <div class="testimonial-box text-center p-4">
+                                    <div class="testi-img-user">
+                                        <img src="{{ $testimonial->userAvatar() }}" alt="" class="rounded-circle testi-user mx-auto d-block">
+                                    </div>
+                                    <img src="/assets/front/images/icon-img/client-quote.png" class="mt-4 pt-2" alt="">
+
+                                    <h4 class="font-italic mt-4 pt-2">{{ $testimonial->body }}</h4>
+
+                                    <div class="testi-border mt-4"></div>
+                                    <p class="text-uppercase text-muted mb-0 mt-4 f-14">{{ $testimonial->title }}</p>
+                                    <h5 class="mt-2">{{ $testimonial->name }}</h5>
+                                </div>
+                            @endforeach
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Testimoninal -->
+    @endif
     <!-- Team -->
     {{-- <section class="team-member-section bg-section pt-100 pb-100"
         style="background: url('/assets/front/images/bg/bg-section-1.png') top center;">
