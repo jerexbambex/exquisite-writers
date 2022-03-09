@@ -117,13 +117,14 @@
             <div class="row clearfix">
 
                 <!-- col -->
-                {{-- <div class="col-lg-6">
+                <div class="col-lg-6">
                     <div class="map-site ml-15">
-                        <iframe
+                        <img src="https://universe.jumpstory.com/wp-content/uploads/user-archive/user_26812_62285f13ee65d_thumb.png?date=1646812958975" alt="">
+                        {{-- <iframe
                             src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14709.912151828446!2d89.5403187!3d22.82179695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1570748232408!5m2!1sen!2sbd"
-                            style="border:0;" allowfullscreen=""></iframe>
+                            style="border:0;" allowfullscreen=""></iframe> --}}
                     </div>
-                </div> --}}
+                </div>
                 <!-- /col -->
                 <!-- col -->
                 <div class="col-lg-6">
