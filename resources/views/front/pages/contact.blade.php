@@ -128,7 +128,10 @@
                 <!-- col -->
                 <div class="col-lg-6">
                     <div class="contact-form-wrap">
-                        <h2>Leave us a message.</h2>
+                        <h4>Your Journey To Efficient Work Output Starts Here<br>
+                            Request Our Free Sample Today<br>
+
+                            <span class="text-danger">Use “free writing sample” as subject of mail.?</span></h4>
                         <form id="contact-form" action="{{ route('postContactUs') }}" method="post">
                             @csrf
                             <!-- row -->
