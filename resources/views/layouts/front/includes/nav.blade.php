@@ -11,7 +11,7 @@
             </div>
             <!-- /Btn -->
             <div class="buy-button">
-                <a href="{{ route('contactUs') }}" target="_blank" class="btn theme-btn btn-display-none">Get Strated
+                <a href="{{ route('contactUs') }}" target="_blank" class="btn theme-btn btn-display-none">Get Started
                 </a>
             </div>
             <!--/Btn -->
