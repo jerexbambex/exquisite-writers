@@ -52,7 +52,7 @@
                 <div class="col-lg-8">
                     <div class="contact-form-wrap">
                         <h2>Your Journey To Efficient Work Output Starts Here<br>
-                            Request Our Free Sample Today<br></h2>
+                            Request Our Free Sample Today!<br></h2>
 
                             <h4><span class="text-danger">Use “free writing sample” as subject of mail.</span></h4>
                         <form id="contact-form" action="{{ route('postContactUs') }}" method="post">
