@@ -21,9 +21,9 @@
 <div class="nk-block-head nk-block-head-sm">
     <div class="nk-block-between">
         <div class="nk-block-head-content">
-            <h3 class="nk-block-title page-title">Teams Card</h3>
+            <h3 class="nk-block-title page-title">Testimonial Card</h3>
             <div class="nk-block-des text-soft">
-                <p>You have total {{ $testimonials->count() }} registered.</p>
+                <p>You have total {{ $testimonials->count() }}.</p>
             </div>
         </div>
         <!-- .nk-block-head-content -->
