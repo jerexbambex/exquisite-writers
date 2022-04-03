@@ -25,6 +25,9 @@
 
     @include('layouts.front.partials._scripts')
 
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+    <div class="elfsight-app-4156069a-2f0d-46bc-b912-4c5a53ebc269"></div>
+
     @include('sweetalert::alert')
 
 </body>
