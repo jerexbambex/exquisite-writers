@@ -28,7 +28,7 @@ class AdminTeamController extends Controller
             request()->validate([
                 'avatar' => ['required', 'image', 'mimes:png,jpg,jpeg', 'max:4048'],
             ]);
-            $results = $this->imageUpload($request->file('avatar'), 600, 600);
+            $results = $this->imageUpload($request->file('avatar'),355, 375);
 
             $attributes['avatar'] = json_encode($results);
         }
@@ -53,7 +53,7 @@ class AdminTeamController extends Controller
                 $this->imageDelete($publicId);
             }
 
-            $results = $this->imageUpload(request()->file('avatar'), 600, 600);
+            $results = $this->imageUpload(request()->file('avatar'), 355, 375);
 
             $attributes['avatar'] = json_encode($results);
         }
