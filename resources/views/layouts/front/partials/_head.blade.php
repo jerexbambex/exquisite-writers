@@ -29,3 +29,5 @@
 <!-- /Style Css -->
 
 <!-- /All css -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1621362716423418" crossorigin="anonymous"></script>
+
